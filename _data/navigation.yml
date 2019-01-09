@@ -10,3 +10,34 @@ main:
     url: /tags/
   - title: "About"
     url: /about/
+
+extensions:
+  - title: Categories
+    children:
+      - title: "Python"
+        url: /categories/python/
+      - title: "Django"
+        url: /categories/django/
+      - title: "HTML&CSS"
+        url: /categories/hc/
+      - title: "JavaScript"
+        url: /categories/javascript/
+      - title: "SQL"
+        url: /categories/sql/
+      - title: "Git"
+        url: /categories/git/
+      - title: "Ruby"
+        url: /categories/ruby/
+      - title: "AWS"
+        url: /categories/aws/
+      - title: "Docker"
+        url: /categories/docker/
+      - title: "DataStructure"
+        url: /categories/datastructure/
+      - title: "Algorithm"
+        url: /categories/algorithm/
+        
+  - title: Extensions
+    children:
+      - title: "Algorithm Problem Solving"
+        url: https://github.com/DevBruce/Algorithm_Problem_Solving

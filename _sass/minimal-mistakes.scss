@@ -53,6 +53,25 @@
      }
 }
 
+.author__urls-wrapper {
+    z-index: 50;
+}
+
+.btn--inverse:hover {
+    color: $lighter-gray;
+    background-color: $dark-gray; 
+}
+
+.nav__list label:hover {
+    color: $lighter-gray;
+    background-color: $dark-gray;
+}
+
+.nav__list input:checked+label {
+    color: $lighter-gray;
+    background-color: $dark-gray;
+}
+
 #main {
     max-width: 96%;
 }
