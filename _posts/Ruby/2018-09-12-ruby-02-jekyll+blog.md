@@ -20,7 +20,7 @@ tags:
 > Ruby 가 설치되어 있다는 전제하에 진행
 
 ```bash
-$ gem install bunlder jekyll
+$ gem install bundler jekyll
 ```
 
 <br><br>
