@@ -1,7 +1,7 @@
 ---
 title: "[Django] Media File"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2019-01-17
 
 categories:
   - Django
@@ -74,19 +74,49 @@ $ pip install Pillow
 
 ## Template
 
-- Form 태그의 속성으로 `method:"POST" enctype:"multipart/form-data"` 지정필요
+
+### HTML Tag
+
+#### form Tag
+
+파일을 업로드 필드가 포함된 Form 의 경우  
+form 태그의 속성으로 `method:"POST" enctype:"multipart/form-data"` 지정해주어야 한다.
 
 ```html
 <form action="" method="POST" enctype="multipart/form-data">
 ```
 
-- template 에서 `MEDIA_URL` 을 불러오기 위해서는, view 에서 전달받은 객체 중 FileField 에 해당하는 속성에 `.url` 을 붙여주면 된다.
+#### input Tag
+
+```html
+<input type="file" name="<NAME>">
+```
+
+input tag 에 name 속성(key)을 지정해주지 않으면 전송된 데이터를 인식하지 못한다.  
+
+`django.forms` 를 상속받은 Form 클래스의 경우  
+name 의 값은 자동으로 해당 클래스의 필드네임으로 할당된다.  
+
+<br>
+
+### Get Relative URL By url
+ 
+template 에서 FileField 에 해당하는 속성의 URL을 가져오기 위해서는 `.url` 을 붙여주면 된다.  
 
 ```html
 {% raw %}<img src="{{ TmpUser.photo.url }}">{% endraw %}
 ```
-tmp 의 photo 속성의 `MEDIA_URL` 을 반환받는다.  
-이를 통해서 바로 img 를 html 에 반환할 수 있다.
+
+`{% raw %}{{ TmpUser.photo.url }}{% endraw %}` 은 `<settings.MEDIA_URL>/TmpUser.photo` 와 같은 값을 반환한다.  
+
+이에따라 `settings.MEDIA_URL` 을 `/media/` 로 할당하였다면  
+`{% raw %}{{ TmpUser.photo.url }}{% endraw %}` 의 값은  
+`"/media/{% raw %}{{ TmpUser.photo.url }}{% endraw %}"` 이 된다.  
+
+<br>
+
+> FileField 의 `url` 메서드는 FileField 의 storage 에 할당되는 기본값을 살펴보면  
+> 작동원리를 파악할 수 있다.
 
 <br><br>
 
@@ -97,6 +127,8 @@ tmp 의 photo 속성의 `MEDIA_URL` 을 반환받는다.
 - 유저가 업로드한 파일(Media File)이 저장될 경로
 
 - `settings.py` 에서 변수 `MEDIA_ROOT` 에 새로운 경로를 할당함으로써 설정 가능하다.
+
+<br>
 
 **Example**
 
@@ -118,8 +150,11 @@ media_path = settings.MEDIA_ROOT  # settings.py 의 MEDIA_ROOT 를 media_path �
 
 - 유저가 업로드한 파일(Media File)의 기본 URL
 
+- `settings.py` 에서 변수 `MEDIA_URL` 에 새로운 값을 할당함으로써 설정 가능하다.
+
 - 끝에 `/` 를 붙여준다.
 
+<br>
 
 **Example**
 
@@ -131,9 +166,10 @@ MEDIA_URL = '/media/'
 
 ## Serving Media File During Development
 
-Media File 은 Static File 과는 다르게 Django 의 개발단계(`DEBUG=True`)에서 기본으로 serving 해주지 않는다. 따라서 개발단계에서 Media File을 serving 받기 위해서는 추가적인 설정을 해줄 필요가 있다.  
+Media File 은 Static File 과는 다르게 Django 의 개발단계(`DEBUG=True`)에서 기본으로 serving 해주지 않는다.  
+따라서 개발단계에서 Media File을 serving 받기 위해서는 추가적인 설정을 해줄 필요가 있다.  
 
-settings.py 를 아래와 같이 설정한 것으로 가정하겠다.
+`settings.py` 를 아래와 같이 설정한 것으로 가정하겠다.
 
 **settings.py**
 
@@ -162,7 +198,8 @@ urlpatterns += static(
 )
 ```
 
-Django 에서 제공하는 `static` 메서드로 Media File 을 개발단계에서도 serving 이 되도록 설정한 것이다. `static` 메서드는 `DEBUG=True` 일 때만 유효하다. `DEBUG=False` 가 되면 빈 리스트를 반환한다.  
+Django 에서 제공하는 `static` 메서드로 Media File 을 개발단계에서도 serving 이 되도록 설정한 것이다.  
+`static` 메서드는 `DEBUG=True` 일 때만 유효하다. `DEBUG=False` 가 되면 빈 리스트를 반환한다.  
 
 <br>
 
@@ -180,7 +217,9 @@ urlpatterns = [
     path('media/<path:path>/', views.media_serve, name='media_serve'),
 ]
 ```
-`settings.py` 에서 `MEDIA_URL` 을 `'/media/'` 로 설정했기 때문에 urlpattern 에서 media 로 시작하는 경로(`MEDIA_URL`)는 `media_serve` 뷰 함수를 반환하도록 설정하였다.
+`settings.py` 에서 `MEDIA_URL` 을 `'/media/'` 로 설정했기 때문에  
+urlpattern 에서 media 로 시작하는 경로(`MEDIA_URL`)는  
+`media_serve` 뷰 함수를 반환하도록 설정하였다.
 
 <br>
 
@@ -196,9 +235,21 @@ def media_serve(request, path):
     return FileResponse(open(file_path, 'rb'), content_type=mimetypes.guess_type(file_path)[0])
 ```
 
-`media_serve` 뷰 함수는 `media/<path:path>/` 의 path 라고 네이밍된 경로를 반환받은 뒤, `MEDIA_ROOT` 와 합쳐서 `file_path` 로 할당한다. 이후 `FileResponse` 를 통해 해당 파일을 반환한다. 이 때, `content_type` 은 `mimetypes.guess_type` 메서드를 통해 파일의 타입을 자동으로 반환받은 값을 전달한다.  
+`media_serve` 뷰 함수는 `media/<path:path>/` 의 path 라고 네이밍된 경로를 반환받은 뒤,  
+`MEDIA_ROOT` 와 합쳐서 `file_path` 로 할당한다. 이후 `FileResponse` 를 통해 해당 파일을 반환한다.  
+이 때, `content_type` 은 `mimetypes.guess_type` 메서드를 통해 파일의 타입을 자동으로 반환받은 값을 전달한다.  
 
-- `mimetypes.guess_type` 은 요소가 두개인 Tuple 을 반환한다. `content_type` 에 구체적인 값을 명시하기 위해 인덱스가 0인 값을 지정해주었다(`[0]`). 인덱스를 지정안하고, 튜플을 전달해도 문제없이 작동하긴 한다. 브라우저의 개발자 도구에서 `content_type` 을 확인해보았을 때, 인덱스를 지정해서 전달한 값과 튜플로 전달한 값 각각 그대로 전달받은 것을 알 수 있다. 둘 다 문제없이 인식하는 것을 보았을 때 브라우저에서 두가지 값을 모두 자동으로 인식해주는 것 같다.
+<br>
+
+**`mimetypes.guess_type` 은 요소가 두개인 Tuple 을 반환한다.**  
+
+`content_type` 에 구체적인 값을 명시하기 위해 인덱스가 0인 값을 지정해주었다(`[0]`).  
+인덱스를 지정안하고, 튜플을 전달해도 문제없이 작동하긴 한다.  
+브라우저의 개발자 도구에서 `content_type` 을 확인해보았을 때,  
+인덱스를 지정해서 전달한 값과 튜플로 전달한 값 각각 그대로 전달받은 것을 알 수 있다.  
+둘 다 문제없이 인식하는 것을 보았을 때 브라우저에서 두가지 값을 모두 자동으로 인식해주는 것 같다.
+
+<br>
 
 > `<path:path>` 에서 왼쪽의 path 는 Path converter 중 하나를 의미한다. (일종의 Type)  
 오른쪽의 path 는 view 함수의 path 인수로 전달할 값(경로)에 해당한다.  
