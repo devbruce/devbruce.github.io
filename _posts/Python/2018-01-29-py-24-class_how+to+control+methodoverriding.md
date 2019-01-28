@@ -1,7 +1,7 @@
 ---
 title: "[Python] Class - How to control Method Overriding"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2019-01-28
 
 categories:
   - Python
@@ -31,7 +31,7 @@ Method Overriding 을 하게 될 경우,
 
 ## 1. 클래스명을 통한 직접적인 부모클래스의 메서드 호출
 
-형태 : `클래스명.메서드이름(self, *args)`
+형태 : `클래스명.메서드이름(self, *args, **kwargs)`
 
 <br>
 
@@ -122,12 +122,13 @@ p1.show_all_info()
 
 ## 2. super()를 활용한 부모클래스의 메서드 호출
 
-형태 : `super().메서드이름(*args)`  
+형태 : `super().메서드이름(*args, **kwargs)`  
+
 > self 가 생략되는 것이 특징이다.
 
 <br>
 
-super()를 활용한 예시를 만들어보겠다.
+`super()` 를 활용한 예시를 만들어보겠다.
 
 ```python
 class A:
@@ -136,15 +137,17 @@ class A:
 
 class B(A):
     def __init__(self):
-        super().__init__()
+        super().__init__()  # self 가 인수로 들어가지 않음
 ```
+
 ```python
 instance = B()
 ```
 \>\>\> `클래스 A 생성자 실행`  
 
 `super()`를 사용하는 것은, 클래스명을 통해 직접호출하는 것과 다르게 
-부모클래스를 호출하는 것이다. (메서드의 인수에 self가 없는 것을 유의해야한다.)  
+부모클래스를 호출하는 것이다.  
+(메서드의 인수에 self가 없는 것을 유의해야한다.)  
 마찬가지로, 메서드를 호출한 뒤, 코드를 추가하는 것도 가능하다.  
 
 ```python
@@ -162,5 +165,7 @@ class B(A):
 
 <br>
 
-그렇다면 클래스명을 통해 직접 메서드를 호출 하는 것과 `super()` 를 통해 메서드를 호출하는 것의 차이가 무엇일까?  
+그렇다면 클래스명을 통해 직접 메서드를 호출 하는 것과  
+`super()` 를 통해 메서드를 호출하는 것의 차이가 무엇일까?  
+  
 이 부분에 대해서는 [[Python] Class - Diamond Inheritance](https://devbruce.github.io/python/py-26-class_diamond+inheritance/) 에서 다루도록 하겠다.
