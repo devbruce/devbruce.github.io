@@ -1,7 +1,7 @@
 ---
 title: "[Python] Data type - dict / set"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2019-02-04
 
 categories:
   - Python
@@ -106,10 +106,10 @@ print(dict(example))
 
 <br>
 
-### dict\_keys, dic\_values, dict\_items
+### dict\_keys, dict\_values, dict\_items
 
-반환된 `dict_keys`, `dic_values`, `dict_items` 를 list 로 변환가능하다. (`list()`)  
-메모리 낭비를 줄이기 위해 리스트가 아닌 `dict_keys`, `dic_values`, `dict_items` 라는 객체로 반환해주는 것이다.
+반환된 `dict_keys`, `dict_values`, `dict_items` 를 list 로 변환가능하다. (`list()`)  
+메모리 낭비를 줄이기 위해 리스트가 아닌 `dict_keys`, `dict_values`, `dict_items` 라는 객체로 반환해주는 것이다.
 
 <br>
 
@@ -135,7 +135,7 @@ print(key_object)
 변수 `key_object`에 변화를 주지 않았음에도
 자동갱신되어 `key_object` = `dict_keys(['name', 'class','number'])` 이 된다.  
  
-**즉 dictionary 의 view 객체는 해당 dinctionary에 변화가 생기면 자동갱신된다.**
+**즉 dictionary 의 view 객체는 해당 dinctionary 에 변화가 생기면 자동갱신된다.**
 
 <br><br>
 
