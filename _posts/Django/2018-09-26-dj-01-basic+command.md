@@ -49,9 +49,10 @@ $ python manage.py makemigrations <AppName>
 ```
 
 **migration 파일 생성**  
+
 모델 변경사항을 migration 으로 저장  
 
-> `<App_Name>` 을 쓰지 않으면, 모든 App이 선택된다.
+> `<AppName>` 을 쓰지 않으면, 모든 App이 선택된다.
 
 <br>
 
@@ -64,7 +65,7 @@ $ python manage.py migrate <AppName>
 `INSTALLED_APPS` (`settings.py`)를 탐색하여  
 DB설정, migration에 따라 필요한 **테이블 생성**  
 
-> `<App_Name>` 을 쓰지 않으면, 모든 App이 선택된다.
+> `<AppName>` 을 쓰지 않으면, 모든 App이 선택된다.
 
 <br>
 
@@ -78,7 +79,7 @@ migration file 번호를 지정하여, DB를 해당 migration 파일상태로 �
 처음으로 돌리고 싶은 경우, `zero` 를 사용한다.
 
 ```bash
-$ python manage.py migrate <App_Name> zero
+$ python manage.py migrate <AppName> zero
 ```
 
 <br>
@@ -94,7 +95,7 @@ $ python manage.py showmigrations <AppName>
 - `[X]` : 적용된 Migration 파일  
 - `[ ]` : 적용되지 않고, 생성만 되어있는 Migration 파일
 
-> `<App_Name>` 을 쓰지 않으면, 모든 App이 선택된다.
+> `<AppName>` 을 쓰지 않으면, 모든 App 이 선택된다.
 
 <br>
 
@@ -166,6 +167,7 @@ $ python manage.py findstatic <FileName or DirectoryName>
 ```
 
 **정적파일 검색**  
+
 Full Path 를 반환해준다.
 
 <br><br>
