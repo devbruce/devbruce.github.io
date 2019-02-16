@@ -28,9 +28,8 @@ n 진법의 수를 10 진법으로 변경하는 방법을 코드로 나타나면
 
 ```python
 def convert_decimal(num, base):
-    num_reversed = str(num)[::-1]
-    
     result = 0
+    num_reversed = reversed(str(num))
     for idx, n in enumerate(num_reversed):
         result += (base ** idx) * int(n)
     return result
@@ -70,12 +69,11 @@ def convert_decimal(num, base):
 이제 해당 리스트를 10 진법으로 표현할 수 있도록 함수를 수정한다.  
 
 ```python
-def convert_decimal(num_list, base):
-    num_reversed = num_list[::-1]
-    
+def convert_decimal(num_list_type, base):
     result = 0
+    num_reversed = reversed(num_list_type)
     for idx, n in enumerate(num_reversed):
-        result += (base ** idx) * n
+        result += (base ** idx) * int(n)
     return result
 ```
 
@@ -136,7 +134,7 @@ n 을 k 로 나누었을 때의 몫이 0 이 될 때까지 위 작업을 반복�
 # num is decimal
 def convert_base(num, base):
     result = ''
-    while num != 0:
+    while num:
         num, rmd = divmod(num, base)
         if rmd > 9:
             result += chr(55+rmd)
@@ -156,7 +154,7 @@ def convert_base(num, base):
 # num is decimal
 def convert_base(num, base):
     result = list()
-    while num != 0:
+    while num:
         num, rmd = divmod(num, base)
         result.append(rmd)
     return result[::-1] or [0]
@@ -169,7 +167,7 @@ def convert_base(num, base):
 Python 에서는  
 10 진수 n 을 2 진법, 8 진법, 16 진법으로 변경하는 함수를 제공한다.  
 
-- 2 진법 : `bin(n)` : : 앞에 `0b` 가 붙은 문자열 반환
+- 2 진법 : `bin(n)` : 앞에 `0b` 가 붙은 문자열 반환
 
 - 8 진법 : `oct(n)` : 앞에 `0o` 가 붙은 문자열 반환
 
