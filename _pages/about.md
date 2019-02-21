@@ -14,7 +14,7 @@ toc_sticky: true
 
 - Email: Bruce93k@gmail.com
 
-- GitHub: <https://github.com/DevBruce>
+- GitHub: <https://github.com/devbruce>
 
 <br>
 
@@ -22,15 +22,15 @@ toc_sticky: true
 
 ### IDEA (Text Data Visualizer)
 
-- GitHub: <https://github.com/DevBruce/IDEA>  
+- GitHub: <https://github.com/devbruce/idea>  
 
-- Link: <http://devbruce-idea.xyz/>
+> Deployment Suspended
 
 <br><br>
 
 # About Blog  
 
-GitHub: <https://github.com/DevBruce/DevBruce.github.io>
+GitHub: <https://github.com/devbruce/devbruce.github.io>
 
 ## Notice
 
