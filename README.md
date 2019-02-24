@@ -2,7 +2,7 @@
 
 ![GitHub license](https://img.shields.io/github/license/DevBruce/DevBruce.github.io.svg)
 
-URL: <https://DevBruce.github.io>
+URL: <https://devbruce.github.io>
 
 <br>
 
