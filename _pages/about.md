@@ -22,9 +22,9 @@ toc_sticky: true
 
 ### IDEA (Text Data Visualizer)
 
-- GitHub: <https://github.com/devbruce/idea>  
+- URL: <http://project-idea.pe.kr>  
 
-> Deployment Suspended
+- GitHub: <https://github.com/devbruce/idea>  
 
 <br><br>
 
