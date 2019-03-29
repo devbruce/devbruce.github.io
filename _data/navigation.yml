@@ -12,7 +12,7 @@ main:
     url: /about/
 
 extensions:
-  - title: Categories
+  - title: Development
     children:
       - title: "Python"
         url: /categories/python/
