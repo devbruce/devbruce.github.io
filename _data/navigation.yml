@@ -37,6 +37,11 @@ extensions:
       - title: "Algorithm"
         url: /categories/algorithm/
         
+  - title: Data Science
+    children:
+      - title: "Deep Learning"
+        url: /categories/deeplearning/
+
   - title: Extensions
     children:
       - title: "Algorithm Problem Solving"
