@@ -90,14 +90,14 @@ $$ b := b -\alpha \frac{\delta}{\delta b}cost(W, b) $$
 
 - 출발지점이 다르다는 것은 **W (weight)의 초기값**을 다르게 설정해준다는 의미이다.  
 
-- Gradient Descent Algorithm 이 출발점에 관계없이 최솟값에 도달하는 함수를  
-Convex Function 이라고 한다.
+- Gradient Descent Algorithm 이 출발점에 관계없이  
+최솟값 (Global Minimum) 에 도달하는 함수를 Convex Function 이라고 한다.
 
 <br><br>
 
 ## Implementation Process
 
-Cost Function 이 **Mean Square Error(평균제곱오차)** 의 형태인 경우 다음과 같다.  
+Cost Function 이 **MSE**(= Mean Square Error *평균제곱오차*) 의 형태인 경우 다음과 같다.  
 
 <br>
 
@@ -109,7 +109,7 @@ $$ cost(W, b) = \frac{1}{m} \sum_{i=1}^m (H(x^{(i)}) - y^{(i)})^2 $$
 
 ```python
 # Python Implementation Code For TensorFlow
-hypothesis = X*W + b
+hypothesis = X*W + b  # (= tf.matmul(X, W) + b)
 cost = tf.reduce_mean(tf.square(hypothesis - Y))
 ```
 
