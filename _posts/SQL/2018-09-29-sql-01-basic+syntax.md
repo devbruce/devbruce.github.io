@@ -1,7 +1,7 @@
 ---
-title: "[SQL] Syntax"
+title: "[SQL] Basic Syntax"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2019-04-13
 
 categories:
   - SQL
@@ -25,9 +25,9 @@ tags:
 
 ---
 
-# SQL Syntax
+# Basic Syntax of SQL
 
-**Structured Query Language**
+SQL: **Structured Query Language**
 
 - 대소문자 구분 X
 
@@ -60,13 +60,13 @@ SELECT * FROM <TableName>;
 **Column(열)** 데이터를 합쳐준다.
 
 ```sql
-SELECT col1, col2 FROM Table
+SELECT col1, col2 FROM Table1
 UNION
 SELECT col3, col4 FROM Table2;
 ```
 
-`Table` 의 `col1`, `Table2` 의 `col3` 를 합쳐서 `col1` 이라는 이름을 가진 Column(열) 데이터와  
-`Table` 의 `col2` 과 `Table2` 의 `col4` 을 합쳐서 `col2` 이라는 이름을 가진 Column(열) 데이터를 가져온다.
+`Table1` 의 `col1`, `Table2` 의 `col3` 를 합쳐서 `col1` 이라는 이름을 가진 Column(열) 데이터와  
+`Table1` 의 `col2` 과 `Table2` 의 `col4` 을 합쳐서 `col2` 이라는 이름을 가진 Column(열) 데이터를 가져온다.
 
 
 - `UNION` 은 default 로 중복값을 제거한다.    
@@ -87,7 +87,7 @@ SELECT <ColName> AS <NewName>, <ColName> AS <NewName>, ...
 FROM <TableName>
 WHERE <Condition>;
 ```
-`Table` 에서 `condition1`의 조건에 해당하는 `col1`과 `col2`를 가져와서  
+`Table1` 에서 `condition1`의 조건에 해당하는 `col1`과 `col2`를 가져와서  
 `col1` 에는 `new_col1` 을, `col2` 에는 `new_col2` 라는 이름을 임시로 할당한다.
 
 <br>
@@ -108,12 +108,12 @@ WHERE <Condition>;
 
 ```sql
 SELECT FUNCTION(col1) AS Result
-FROM Table
+FROM Table1
 WHERE condition1;
 ```
 > `FUNCTION` 에는 SUM / AVG / MAX / MIN / COUNT 가 대입된다.
   
-`Table` 에서 `condition1` 의 조건에 해당하는 `col1` 을 가져와서 `FUNCTION`에 의해 연산되고, `Result` 라는 임시 Column(열) 이름을 가진 데이터로 반환된다.
+`Table1` 에서 `condition1` 의 조건에 해당하는 `col1` 을 가져와서 `FUNCTION`에 의해 연산되고, `Result` 라는 임시 Column(열) 이름을 가진 데이터로 반환된다.
 
 <br>
 
@@ -155,11 +155,11 @@ WHERE <Condition>;
 
 ```sql
 SELECT col3
-FROM Table
+FROM Table1
 WHERE Age BETWEEN 25 AND 30;
 ```
 
-`Table` 에서 `Age` 가 25이상 30이하인 경우, `col3` 을 가져온다.  
+`Table1` 에서 `Age` 가 25이상 30이하인 경우, `col3` 을 가져온다.  
 
 - `<A>` 와 `<B>` 에는 숫자, 날짜, 텍스트 등이 들어갈 수 있다.
 
@@ -173,11 +173,12 @@ WHERE Age BETWEEN 25 AND 30;
 
 ```sql
 SELECT col2
-FROM Table
+FROM Table1
 WHERE Major IN (Computer Science, Business Administration);
 ```
 
-`Table` 에서 `Major`가 `Computer Science` 또는 `Business Administartion` 인 경우, `col2`만 가져온다.
+`Table1` 에서 `Major`가 `Computer Science` 또는 `Business Administartion` 인 경우,  
+`col2`만 가져온다.
 
 <br>
 
@@ -187,12 +188,13 @@ WHERE Major IN (Computer Science, Business Administration);
 
 ```sql
 SELECT col1
-FROM Table
+FROM Table1
 WHERE EXISTS
-(SELECT * From Table2 WHERE id = Table.id);
+(SELECT * From Table2 WHERE id = Table1.id);
 ```
 
-Table2 `id` 값과 `Table`의 `id` 값이 같은 경우의 데이터를 요청해서 레코드가 존재한다면 서브쿼리는 `True` 를 반환하고, 이에따라 메인쿼리는 `Table` 에서 `col1` 을 가져온다.
+`Table2` 의 `id` 값과 `Table1`의 `id` 값이 같은 경우의 데이터를 요청해서 레코드가 존재한다면  
+서브쿼리는 `True` 를 반환하고, 이에따라 메인쿼리는 `Table1` 에서 `col1` 을 가져온다.
 
 <br>
 
@@ -202,11 +204,11 @@ Table2 `id` 값과 `Table`의 `id` 값이 같은 경우의 데이터를 요청�
 
 ```sql
 SELECT *
-FROM Table
+FROM Table1
 WHERE Name Like '__u%';
 ```
 
-`Table` 에서 `Name` 이 3번째 글자가 `u` 인 경우, 모든 Column(열)을 가져온다.
+`Table1` 에서 `Name` 이 3번째 글자가 `u` 인 경우, 모든 Column(열)을 가져온다.
 
 <br>
 
@@ -246,11 +248,11 @@ VALUES (<Value>, <Value>, <Value>, ...);
 
 ```sql
 SELECT col1
-FROM Table
+FROM Table1
 WHERE col3 IS NULL;
 ```
 
-`Table`에서 `col3`이 `null`값인 경우, `col1` 을 가져온다.
+`Table1`에서 `col3`이 `null`값인 경우, `col1` 을 가져온다.
 
 <br><br>
 
@@ -266,12 +268,12 @@ WHERE <Condition>;
 <br>
 
 ```sql
-DELETE FROM Table;
+DELETE FROM Table1;
 ```
 
 - 위와같이 WHERE (조건문) 없이 사용시 모든 Row가 제거될 수 있으므로 주의  
   - 테이블의 구조 및 속성 등은 그대로 남는다. (테이블을 제거하는 것이 아니기 때문)
-  - `DELETE * FROM Table` 과 동일
+  - `DELETE * FROM Table1` 과 동일
 
 <br><br>
 
@@ -295,7 +297,7 @@ WHERE <Condition>;
 
 ```sql
 SELECT col3
-FROM Table
+FROM Table1
 ORDER BY col1 DESC, col2 ASC;
 ```
 
