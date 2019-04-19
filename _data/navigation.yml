@@ -39,6 +39,8 @@ extensions:
         
   - title: Data Science
     children:
+      - title: "Machine Learning"
+        url: /categories/machinelearning/
       - title: "Deep Learning"
         url: /categories/deeplearning/
 
