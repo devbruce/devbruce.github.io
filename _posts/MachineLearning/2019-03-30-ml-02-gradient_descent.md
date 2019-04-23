@@ -1,13 +1,13 @@
 ---
-title: "[DL] Gradient Descent Algorithm"
+title: "[ML] Gradient Descent Algorithm"
 excerpt: 
 last_modified_at: 2019-03-30
 
 categories:
-  - DeepLearning
+  - MachineLearning
 
 tags:
-  - deep_learning
+  - machine_learning
   - gradient_descent_algorithm
   - derivative
   - learning_rate
@@ -64,7 +64,7 @@ $$ b := b -\alpha \frac{\delta}{\delta b}cost(W, b) $$
 
 <br>
 
-![dl-02-gradient_descent](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/DeepLearning/images/dl-02-gradient_descent.png?raw=true){: width="500px"}  
+![dl-02-gradient_descent](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/MachineLearning/images/ml-02-gradient_descent.png?raw=true){: width="500px"}  
 
 <br>
 
@@ -80,7 +80,7 @@ $$ b := b -\alpha \frac{\delta}{\delta b}cost(W, b) $$
 
 <br>
 
-![ds-02-minimum](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/DeepLearning/images/dl-02-minimum.png?raw=true){: width="500px"}  
+![ds-02-minimum](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/MachineLearning/images/ml-02-minimum.png?raw=true){: width="500px"}  
 
 <br>
 
