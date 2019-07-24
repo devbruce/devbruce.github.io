@@ -8,19 +8,9 @@ toc_sticky: true
 
 ---
 
-# About Me
+# Project  
 
-- Name: Bruce Kim
-
-- Email: Bruce93k@gmail.com
-
-- GitHub: <https://github.com/devbruce>
-
-<br>
-
-## Project  
-
-### IDEA (Text Data Visualizer)
+## IDEA (Text Data Visualizer)
 
 - URL: <http://project-idea.pe.kr>  
 
@@ -28,9 +18,9 @@ toc_sticky: true
 
 <br><br>
 
-# About Blog  
+# Blog Info
 
-GitHub: <https://github.com/devbruce/devbruce.github.io>
+GitHub Repository: <https://github.com/devbruce/devbruce.github.io>
 
 ## Notice
 
