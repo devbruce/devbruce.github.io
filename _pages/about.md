@@ -12,8 +12,6 @@ toc_sticky: true
 
 ## IDEA (Text Data Visualizer)
 
-- URL: <http://project-idea.pe.kr>  
-
 - GitHub: <https://github.com/devbruce/idea>  
 
 <br><br>
