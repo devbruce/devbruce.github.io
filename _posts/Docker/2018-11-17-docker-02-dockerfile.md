@@ -36,7 +36,7 @@ $ docker build [OPTIONS] <Path>
 ## docker build OPTIONS
 
 - `-t` : `--tag` 와 동일  
-생성할 이미지의 `<ImageName>:<tag>` 를 설정한다.
+생성할 이미지의 `<ImageName>:<tag>` 를 설정한다. (대문자 사용불가)
 
 - `-f` : `--file` 와 동일  
 Dockerfile 을 구체적으로 지정한다.  
