@@ -320,7 +320,7 @@ class PreactResNet(nn.Module):
             nn.MaxPool2d(kernel_size=3, padding=1, stride=2),
         )
         self.encoder = nn.Sequential(
-            self._make_layer(block, num_blocks[0], out_channels=64, stride=1),
+            self._make_layer(block, num_blocks[0], out_channels=64, stride=1),  # Final out channels is (out_channels * block.expansion)
             self._make_layer(block, num_blocks[1], out_channels=128, stride=2),
             self._make_layer(block, num_blocks[2], out_channels=256, stride=2),
             self._make_layer(block, num_blocks[3], out_channels=512, stride=2),
