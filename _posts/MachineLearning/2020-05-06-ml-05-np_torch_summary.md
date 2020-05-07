@@ -34,14 +34,16 @@ tensor = torch.randn(1, 2, 3, 4)
 
 ### Numpy
 
-- `shape`, `reshape()`
+- `shape`, `ndim`, `size`, `reshape()`
 
 ```python
 print(arr.shape)
 print(arr.ndim)
+print(arr.size)
 ```
 \>\>\> `(1, 2, 3, 4)`  
 \>\>\> `4`  
+\>\>\> `24`  
 
 ```python
 new_arr = arr.reshape(-1, 3)
@@ -53,7 +55,7 @@ print(new_arr.shape)
 
 ### PyTorch
 
-- `dim()`, `size()`, `view()`, **`ndim`, `shape`, `reshape()`**  
+- `size()`, `dim()`, `numel()`, `view()`, **`ndim`, `shape`, `reshape()`**  
 
 ```python
 print(tensor.size())
@@ -62,6 +64,7 @@ print(tensor.size(1))
 print(tensor.size(2))
 print(tensor.size(3))
 print(tensor.dim())
+print(tensor.numel())
 ```
 \>\>\> `torch.Size([1, 2, 3, 4])`  
 \>\>\> `1`  
@@ -69,6 +72,7 @@ print(tensor.dim())
 \>\>\> `3`  
 \>\>\> `4`  
 \>\>\> `4`  
+\>\>\> `24`  
 
 ```python
 new_tensor = tensor.view(-1, 3)
