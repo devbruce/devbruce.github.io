@@ -1,7 +1,7 @@
 ---
 title: "[Python] Class - @property / @name.setter"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2020-05-11
 
 categories:
   - Python
@@ -19,15 +19,15 @@ tags:
 
 # @property, @name.setter
 
-[[Python] Class - Information Hiding (2)](https://devbruce.github.io/python/py-31-class_information+hiding2/)
+[[Python] Class - getter, setter](https://devbruce.github.io/python/py-31-class_getter_setter/)
 에서 접근자 method 와 설정자 method 에 대해서 다루었다.
 
 <br>
 
-- **접근자(getter)** : 정보은닉된 값에 접근을 할 수 있도록 해주는 메서드
+- **접근자(getter)** : 접근 제한된 값에 접근을 할 수 있도록 해주는 메서드
   - `@property`
 
-- **설정자(setter)** : 정보은닉된 값에 접근하여 수정할 수 있도록 해주는 메서드
+- **설정자(setter)** : 접근 제한된 값에 접근하여 수정할 수 있도록 해주는 메서드
   - `@name.setter`
 
 <br>

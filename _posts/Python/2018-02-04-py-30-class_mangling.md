@@ -1,7 +1,7 @@
 ---
-title: "[Python] Class - Information Hiding (1)"
+title: "[Python] Class - Mangling"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2020-05-11
 
 categories:
   - Python
@@ -9,17 +9,21 @@ categories:
 tags:
   - python
   - class
+  - Mangling
   - information hiding
 
 ---
 
 ![python-version-3.7.1](https://img.shields.io/badge/python-v3.7.1-blue.svg)
 
-# Information Hiding (정보은닉)
+# Class - Mangling
+
+## Information Hiding (정보은닉)
 
 - 코드를 제공할 때, 수정되어서는 안되는 코드를 보호하기 위해 접근을 못하도록 제한하는 것을 의미한다.(안정적 구현이 목적)  
 
-- Python 은 지원하지 않지만, 정보은닉 의도를 표현할 수는 있다.  
+- Python 은 지원하지 않지만, `__` 를 통해 정보은닉 의도를 표현할 수는 있다.  
+  - 정확히는 Name Mangling 이다.
 
 <br><br>
 
@@ -62,7 +66,8 @@ ch_first.name
 
 문제없이 출력됨을 알 수 있다.  
 그런데, 생성된 캐릭터 `ch_first` 의 소유자가 캐릭터의 고유번호와 이름이 갑자기 마음에 안들어서 바꾸고자 마음 먹었다.  
-그리고 코드를 살펴본 결과 변수에 접근하는 것에 아무런 제한이 없다. 그래서 아래와 같이 마음대로 수정하였다.  
+그리고 코드를 살펴본 결과 변수에 접근하는 것에 아무런 제한이 없다.  
+그래서 아래와 같이 마음대로 수정하였다.  
 
 ```python
 ch_first.num = 77
@@ -85,6 +90,8 @@ ch_first.name
 코드를 직접 작성했던 개발자는 이러한 상황을 원치않을 수 있다.  
 이러한 상황을 막기위해 Information Hiding (정보은닉)을 사용해보자.  
 
+<br>
+
 - Information Hiding 사용한 경우
 
 ```python
@@ -104,7 +111,7 @@ class MakeCh:
 ```
 
 처음 제시된 코드와 다른점은, `__`(double underscore) 가 `num` 과 `name` 앞에 붙었다는 것이다.  
-이 두개를 붙이는 것이 Python 에서의 정보은닉이라고 할 수 있다.  
+Double Underscore 가 앞에 붙게되면 Python 에서 정보은닉과 유사한 효과를 볼 수 있다.  
 변수에 직접적인 접근이 되는지 확인해보자.  
 
 ```python
@@ -124,8 +131,9 @@ ch_first.__num
 \>\>\> `AttributeError`  
 
 변수 `__num` 과 `__name` 에 접근이 되질 않는다.  
-Information Hiding 이 되었다고 할 수 있다.  
-그런데 Python은 Information Hiding을 지원하지 않는데 어떻게 된 것일까? 한번 자세히 살펴보자.
+정보은닉 (Information Hiding)이 되었다고 할 수 있다.  
+그런데 Python은 Information Hiding 을 사실상 지원하지 않는다.  
+해당 결과는 Information Hiding 이 아닌, Python 의 Mangling 이라고 한다.  
 
 ```python
 ch_first.__dict__
@@ -133,6 +141,7 @@ ch_first.__dict__
 \>\>\> ```{'_MakeCh__name': 'first', '_MakeCh__num': 1}```  
 
 각 인스턴스 변수들이 `__클래스이름__변수` 형태로 변환되어있다.  
+즉 다른이름으로 Mangling 되었다고 할 수 있다.  
 그럼 위의 형태로 접근하는 것이 가능한지 확인해보겠다.  
 
 ```python
@@ -142,7 +151,7 @@ ch_first.__MakeCh__name = "NewName"
 
 직접 변수에 접근한 것이 맞는지 접근자 함수를 통해 결과값을 확인해보자.  
 
-> 접근자에 대한 설명은 다음 포스팅 [[Python] Class - Information Hiding (2)](https://devbruce.github.io/python/py-31-class_information+hiding2/) 에서 다루겠다.  
+> 접근자에 대한 설명은 다음 포스팅 [[Python] Class - getter, setter](https://devbruce.github.io/python/py-31-class_getter_setter/) 에서 다루겠다.  
 어려운 내용은 아니므로 `get_num()` 과 `get_name()` 메서드를 직접 해석해보고 아래내용을 이해해도 문제없다.
 
 ```python
@@ -155,9 +164,11 @@ ch_first.get_name()
 ```
 \>\>\> `'NewName'`  
 
-인스턴스 변수가 변경되었다. 다시 말해, 변수에 직접적인 접근이 가능하다.  
-결론적으로 Python 에서는 Information Hiding (정보은닉) 기능이 존재하지 않음을 알 수 있다.  
-하지만, `__` (double underscore)를 통해 "접근금지" 라는 의사표현은 가능하다는 점을 잊어서는 안된다.  
+인스턴스 변수가 문제없이 변경되었다.  
+
+정리하자면  
+Python 에서는 Information Hiding (정보은닉) 기능은 존재하지 않는다.  
+하지만, `__` (double underscore)를 통해 "접근금지" 라는 의사표현을 Name Mangling 을 통해 가능하다.  
 
 > 변수 앞에 `_` (single underscore)를 하게되면, 접근을 자제하라는 경고, (protected 제한자와 유사)  
-> `__` (double underscore)는 강한 접근 거부 의사를 표현하는 것이라고 볼 수 있다. (private 제한자와 유사)
+> `__` (double underscore)는 강한 접근 거부 의사를 표현하는 것이라고 볼 수 있다. (private 제한자와 유사)  
