@@ -166,7 +166,7 @@ mysite
 설정패키지 폴더에 해당하는 mysite 내부의 settings.py 를 살펴보면 `BASE_DIR`은 아래와 같이 할당되어있다.
 
 ```python
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.apspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ```
 
 os.path 메서드를 토대로 위의 코드를 해석해보자.
@@ -179,12 +179,12 @@ os.path.abspath(__file__)
 \>\>\> `'/Users/Bruce/Desktop/path_test/mysite/mysite/settings.py'`
 
 ```python
-os.path.dirname(os.path.apspath(__file__))
+os.path.dirname(os.path.abspath(__file__))
 ```
 \>\>\> `'/Users/Bruce/Desktop/path_test/mysite/mysite'`
 
 ```python
-os.path.dirname(os.path.dirname(os.path.apspath(__file__)))
+os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ```
 \>\>\> `'/Users/Bruce/Desktop/path_test/mysite'`
 
