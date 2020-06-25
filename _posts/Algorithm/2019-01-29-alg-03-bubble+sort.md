@@ -165,12 +165,18 @@ tags:
 
 ## Python Implementation Code
 
+- `swap` 변수를 활용하여 변화가 없을 시 바로 종료하도록 설정
+
 ```python
-def bubble_sort(data):
-    l = len(data)
+def bubble_sort(seq):
+    l = len(seq)
     for i in range(l-1):
+    	swap = False
         for j in range(l-1-i):
-            if data[j] > data[j+1]:
-                data[j], data[j+1] = data[j+1], data[j]
-    return data
+            if seq[j] > seq[j+1]:
+                seq[j], seq[j+1] = seq[j+1], seq[j]
+                swap = True
+		if not swap:
+			break
+    return seq
 ```
