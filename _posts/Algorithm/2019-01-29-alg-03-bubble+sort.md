@@ -176,7 +176,7 @@ def bubble_sort(seq):
             if seq[j] > seq[j+1]:
                 seq[j], seq[j+1] = seq[j+1], seq[j]
                 swap = True
-		if not swap:
-			break
+        if not swap:
+            break
     return seq
 ```
