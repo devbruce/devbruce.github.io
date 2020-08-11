@@ -36,6 +36,8 @@ extensions:
         url: /categories/datastructure/
       - title: "Algorithm"
         url: /categories/algorithm/
+      - title: "ETC"
+        url: /categories/etc/
         
   - title: Data Science
     children:
