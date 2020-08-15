@@ -1,7 +1,7 @@
 ---
 title: "[Python] pyenv / pyenv-virtualenv"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2020-08-15
 
 categories:
   - Python
@@ -13,29 +13,49 @@ tags:
 
 ---
 
-![OS-macOS](https://img.shields.io/badge/OS-macOS-blue.svg)
-
-
 # pyenv
 
 Python Version Manager
 
 <br>
 
-## Install
-
-1\. brew를 통해 Install
+## Install (macOS)
 
 ```bash
 $ brew install pyenv
 ```
 
-2\. 아래 코드를 터미널에 입력  
-(마지막 `.zshrc` 은 사용하는 셸에 맞게 수정필요)
-
 ```bash
 $ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 ```
+
+> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
+
+<br><br>
+
+## Install (ubuntu)
+
+### Prerequisites ([Common-build-problems Link](https://github.com/pyenv/pyenv/wiki/Common-build-problems))
+
+```bash
+$ sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+```
+
+<br>
+
+```bash
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+```
+
+```bash
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+```
+
+> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
 
 <br><br>
 
@@ -47,19 +67,29 @@ $ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\
 
 <br>
 
-## Install
-
-1\. brew를 통해 Install
+## Install (macOS)
 
 ```bash
 $ brew install pyenv-virtualenv
 ```
 
-2\. 아래 코드를 본인의 셸 프로필 파일에 추가한다.
+```bash
+$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
+```
+> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
+
+<br>
+
+## Install (ubuntu)
 
 ```bash
-eval "$(pyenv virtualenv-init -)"
+$ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 ```
+
+```bash
+$ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
+```
+> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
 
 <br><br>
 
