@@ -36,6 +36,10 @@ tensor = torch.randn(1, 2, 3, 4)
 
 - `shape`, `ndim`, `size`, `reshape()`
 
+**Note:** numpy 의 reshape 의 반환값은 `view()` 가 적용된다.  
+즉 `copy()` 가 되는 형태가 아니기 때문에 base array 를 참조하여 메모리를 공유한다.
+{: .notice--warning}
+
 ```python
 print(arr.shape)
 print(arr.ndim)
@@ -55,7 +59,7 @@ print(new_arr.shape)
 
 ### PyTorch
 
-- `size()`, `dim()`, `numel()`, `view()`, **`ndim`, `shape`, `reshape()`**  
+- `size()`, `dim()`, `numel()`, `view()`, `ndim`, `shape`, `reshape()`  
 
 ```python
 print(tensor.size())
