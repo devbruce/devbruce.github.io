@@ -246,4 +246,4 @@ Layer 가 깊어지면 training time 이 증가하는 것을 고려하여 Residu
 
 ### ResNet Code Implementation with Pytorch
 
-- Code Link: <https://github.com/DevBruce/torch-implementation/blob/master/resnet.py>
+- Code Link: <https://github.com/DevBruce/torch-implementations/blob/master/resnet.py>
