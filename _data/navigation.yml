@@ -12,8 +12,10 @@ main:
     url: /about/
 
 extensions:
-  - title: Development
+  - title: Categories
     children:
+      - title: "Machine Learning"
+        url: /categories/machinelearning/
       - title: "Python"
         url: /categories/python/
       - title: "Django"
@@ -39,10 +41,6 @@ extensions:
       - title: "ETC"
         url: /categories/etc/
         
-  - title: Data Science
-    children:
-      - title: "Machine Learning"
-        url: /categories/machinelearning/
 
   - title: Extensions
     children:
