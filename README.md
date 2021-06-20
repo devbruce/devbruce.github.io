@@ -1,6 +1,6 @@
-# DevBruce's Blog
+# Bruce Kim's Tech Blog
 
-![GitHub license](https://img.shields.io/github/license/DevBruce/DevBruce.github.io.svg)
+![GitHub license](https://img.shields.io/github/license/devbruce/devbruce.github.io.svg)
 
 URL: <https://devbruce.github.io>
 
@@ -21,4 +21,4 @@ If there are some problems on my blog, please give me feedbacks.
 
 ## Reference
 
-See [NOTICE/README.md](https://github.com/DevBruce/DevBruce.github.io/blob/master/NOTICE/README.md)
+See [NOTICE/README.md](https://github.com/devbruce/devbruce.github.io/blob/master/NOTICE/README.md)
