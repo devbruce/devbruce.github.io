@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default"  # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-US"
-title                    : "DevBruce's Blog"
+title                    : "Bruce Kim's Tech Blog"
 title_separator          : "-"
-name                     : "DevBruce"
+name                     : "Bruce Kim"
 description              : "Tech Blog"
 url                      : "https://devbruce.github.io"  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
