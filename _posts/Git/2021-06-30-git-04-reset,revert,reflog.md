@@ -1,5 +1,5 @@
 ---
-title: "[Git] reset, revert, reflog Commands Summary"
+title: "[Git] Commands Summary - reset, revert, reflog"
 excerpt: 
 last_modified_at: 2021-06-30
 
@@ -14,7 +14,7 @@ tags:
 
 ---
 
-# reset, revert, reflog Commands Summary
+# Commands Summary - reset, revert, reflog
 
 ![git-version-2.29.2](https://img.shields.io/badge/Git-v2.29.2-yellow.svg)
 
