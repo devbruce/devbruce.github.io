@@ -42,7 +42,7 @@ extensions:
         url: /categories/etc/
         
 
-  - title: Extensions
+  - title: Algorithm Problem Solving
     children:
-      - title: "Algorithm Problem Solving"
-        url: https://github.com/DevBruce/Algorithm_Problem_Solving/blob/master/README.md
+      - title: "Baekjoon Online Judge"
+        url: /categories/boj/
