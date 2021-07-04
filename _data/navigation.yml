@@ -38,11 +38,7 @@ extensions:
         url: /categories/datastructure/
       - title: "Algorithm"
         url: /categories/algorithm/
-      - title: "ETC"
-        url: /categories/etc/
-        
-
-  - title: Algorithm Problem Solving
-    children:
       - title: "Baekjoon Online Judge"
         url: /categories/boj/
+      - title: "ETC"
+        url: /categories/etc/

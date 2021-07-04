@@ -5,7 +5,7 @@ layout: archive
 author_profile: true
 ---
 
-{% assign posts = site.categories.boj | sort:'date' | reverse %}
+{% assign posts = site.categories.BOJ | sort:'date' | reverse %}
 
 {% for post in posts %}
     {% include archive-single.html %}
