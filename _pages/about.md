@@ -8,14 +8,6 @@ toc_sticky: true
 
 ---
 
-# Project  
-
-## IDEA (Text Data Visualizer)
-
-- GitHub: <https://github.com/devbruce/idea>  
-
-<br><br>
-
 # Blog Info
 
 GitHub Repository: <https://github.com/devbruce/devbruce.github.io>
