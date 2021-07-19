@@ -1,7 +1,7 @@
 ---
 title: "[Python] pyenv / pyenv-virtualenv"
 excerpt: 
-last_modified_at: 2020-08-15
+last_modified_at: 2021-07-19
 
 categories:
   - Python
@@ -26,7 +26,7 @@ $ brew install pyenv
 ```
 
 ```bash
-$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+$ echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
 ```
 
 > `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
@@ -52,7 +52,7 @@ $ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 ```bash
 $ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 $ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+$ echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
 ```
 
 > `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
