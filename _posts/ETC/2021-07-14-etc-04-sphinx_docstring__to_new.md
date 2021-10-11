@@ -1,10 +1,10 @@
 ---
-title: "[Python] Sphinx - Docstring Syntax / Napoleon"
+title: "[ETC] Sphinx - Docstring Syntax / Napoleon"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2021-07-14
 
 categories:
-  - Python
+  - ETC
 
 tags:
   - python
@@ -18,8 +18,7 @@ tags:
 
 ---
 
-![python-version-3.7.1](https://img.shields.io/badge/python-v3.7.1-blue.svg)
-![sphinx-version-1.8.2](https://img.shields.io/badge/sphinx-v1.8.2-yellow.svg)
+![sphinx-version-4.1.0](https://img.shields.io/badge/Sphinx-v4.1.0-lightgreen.svg)
 
 # Docstring Syntax
 
@@ -180,18 +179,8 @@ def example_numpy(a, b):
 
 # Napoleon
 
-Google Style 또는 NumPy Style Docstring 을  
-Sphinx 가 parse 가능하게 해준다.  
-즉 reStructuredText 형식을 사용하지 않더라도 동일한 결과물을  
-빌드할 수 있다.  
-
-<br>
-
-## Install
-
-```bash
-$ pip install sphinxcontrib-napoleon
-```
+Google Style 또는 NumPy Style Docstring 을 Sphinx 가 parse 가능하게 해준다.  
+즉 reStructuredText 형식을 사용하지 않더라도 동일한 결과물을 빌드할 수 있다.  
 
 <br>
 
@@ -213,10 +202,9 @@ extensions = [
 Napoleon 에 의해 Google Style 과 NumPy Style 모두  
 아래 이미지와 같이 동일한 결과가 되어 나타난다.  
 
-![py-sphinx_docstring+result](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Python/images/py-45-sphinx_docstring+result.png?raw=true){: width="400px"}  
+![py-sphinx_docstring+result](./images/etc-04-sphinx_docstring+result.png?raw=true){: width="400px"}  
 
 - example 함수는 `example` 패키지의 `first_module` 에 작성  
-
 - 테마는 `sphinx_rtd_theme` 을 적용한 상태  
 
 <br><br>
@@ -224,7 +212,5 @@ Napoleon 에 의해 Google Style 과 NumPy Style 모두
 # Reference
 
 - [Sphinx Documentation - Support for NumPy and Google style docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html)
-
 - [Sphinx Documentation - Example Google Style Python Docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_google.html)
-
 - [Sphinx Documentation - Example NumPy Style Python Docstrings](https://www.sphinx-doc.org/en/master/usage/extensions/example_numpy.html)

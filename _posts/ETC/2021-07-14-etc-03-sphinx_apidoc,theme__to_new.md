@@ -1,10 +1,10 @@
 ---
-title: "[Python] Sphinx - Apidoc / Theme"
+title: "[ETC] Sphinx - Apidoc / Theme"
 excerpt: 
-last_modified_at: 2019-01-04
+last_modified_at: 2021-07-14
 
 categories:
-  - Python
+  - ETC
 
 tags:
   - python
@@ -16,8 +16,7 @@ tags:
 
 ---
 
-![python-version-3.7.1](https://img.shields.io/badge/python-v3.7.1-blue.svg)
-![sphinx-version-1.8.2](https://img.shields.io/badge/sphinx-v1.8.2-yellow.svg)
+![sphinx-version-4.1.0](https://img.shields.io/badge/Sphinx-v4.1.0-lightgreen.svg)
 
 # Set Basic Environment
 
@@ -257,7 +256,7 @@ $ make html
 
 빌드가 정상적으로 완료되면 `doc/build/html/index.html` 을 실행해보자.  
 
-![py-sphinx_apidoc.png](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Python/images/py-44-sphinx_apidoc.png?raw=true){: width="650px"}
+![py-sphinx_apidoc.png](./images/etc-03-sphinx_apidoc.png?raw=true){: width="650px"}
 
 <br><br>
 
@@ -290,7 +289,7 @@ html_theme = "sphinx_rtd_theme"
 위와 같이 변수를 변경하고 저장한다.  
 그리고 `make html` 를 통해 빌드하여 결과를 확인해보자.  
 
-![py-sphinx_apidoc_theme](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Python/images/py-44-sphinx_apidoc_theme.png?raw=true){: width="650px"}  
+![py-sphinx_apidoc_theme](./images/etc-03-sphinx_apidoc_theme.png?raw=true){: width="650px"}  
 
 테마가 적용된 것을 확인할 수 있다.  
 
