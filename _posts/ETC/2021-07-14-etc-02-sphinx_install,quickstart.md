@@ -22,7 +22,7 @@ tags:
 ## Install
 
 ```bash
-$ pip install -U sphinx
+pip install -U sphinx
 ```
 
 <br>
@@ -30,7 +30,7 @@ $ pip install -U sphinx
 ## Quickstart
 
 ```bash
-$ sphinx-quickstart ${RootPath}
+sphinx-quickstart ${RootPath}
 ```
 
 - `${RootPath}`: 현재 경로를 기준으로 sphinx 관련파일을 생성한다. (Default : `.`)  
@@ -146,7 +146,7 @@ $ sphinx-build -b html ${SrcDir} ${BuildDir}
 
 <br>
 
-![etc-sphinx_quickstart](./images/etc-02-sphinx_quickstart.png?raw=true){: width="650px"}
+![etc-sphinx_quickstart](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/ETC/images/etc-02-sphinx_quickstart.png?raw=true){: width="650px"}
 
 <br><br>
 

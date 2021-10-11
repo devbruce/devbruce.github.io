@@ -202,7 +202,7 @@ extensions = [
 Napoleon 에 의해 Google Style 과 NumPy Style 모두  
 아래 이미지와 같이 동일한 결과가 되어 나타난다.  
 
-![py-sphinx_docstring+result](./images/etc-04-sphinx_docstring+result.png?raw=true){: width="400px"}  
+![etc-sphinx_docstring+result](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/ETC/images/etc-04-sphinx_docstring+result.png?raw=true){: width="400px"}  
 
 - example 함수는 `example` 패키지의 `first_module` 에 작성  
 - 테마는 `sphinx_rtd_theme` 을 적용한 상태  

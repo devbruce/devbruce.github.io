@@ -23,10 +23,10 @@ tags:
 임의의 디렉토리에 테스트를 위한 임시 패키지(aaa)를 생성하고, 아래의 명령어로 sphinx 를 시작한다.  
 
 ```bash
-$ sphinx-quickstart doc
+sphinx-quickstart doc
 ```
 
-> quickstart 관련 참조 : [[Python] Sphinx - Install / Quickstart](https://devbruce.github.io/python/py-43-sphinx_install,quickstart/)
+> quickstart 관련 참조 : [[ETC] Sphinx - Install / Quickstart](https://devbruce.github.io/etc/etc-02-sphinx_install,quickstart/)
 
 <br>
 
@@ -78,7 +78,7 @@ sphinx 가 aaa 패키지를 인식하기 위해선 아래의 작업이 요구된
 ## sphinx-apidoc
 
 ```bash
-$ sphinx-apidoc [OPTIONS] -o <OUTPUT_PATH> <MODULE_PATH> [EXCLUDE_PATTERN, …]
+sphinx-apidoc [OPTIONS] -o <OUTPUT_PATH> <MODULE_PATH> [EXCLUDE_PATTERN, …]
 ```
 
 - `<MODULE_PATH>` 에 지정한 패키지의 `.rst` 파일을 `<OUTPUT_PATH>` 에 생성한다.  
@@ -105,7 +105,7 @@ $ sphinx-apidoc [OPTIONS] -o <OUTPUT_PATH> <MODULE_PATH> [EXCLUDE_PATTERN, …]
 
 - `-T` (= `--no-toc`) : toc 파일을 생성하지 않는다. (`--full` 옵션이 주어질 경우 무시된다.)
 
-- . . .
+- ...
 
 <br><br>
 
@@ -114,7 +114,7 @@ $ sphinx-apidoc [OPTIONS] -o <OUTPUT_PATH> <MODULE_PATH> [EXCLUDE_PATTERN, …]
 프로젝트의 루트 디렉토리로 이동한 뒤 아래와 같이 입력한다.
 
 ```bash
-$ sphinx-apidoc -f -o doc/source aaa
+sphinx-apidoc -f -o doc/source aaa
 ```
 \>\>\> `Creating file doc/source/aaa.rst.`  
 \>\>\> `Creating file doc/source/modules.rst.`  
@@ -251,12 +251,12 @@ aaa 패키지가 위치한 경로를 PYTHONPATH 에 추가한다.
 `doc/` 로 이동한 뒤 아래의 명령어를 터미널에서 입력한다.
 
 ```bash
-$ make html
+make html
 ```
 
 빌드가 정상적으로 완료되면 `doc/build/html/index.html` 을 실행해보자.  
 
-![py-sphinx_apidoc.png](./images/etc-03-sphinx_apidoc.png?raw=true){: width="650px"}
+![etc-sphinx_apidoc.png](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/ETC/images/etc-03-sphinx_apidoc.png?raw=true){: width="650px"}
 
 <br><br>
 
@@ -271,7 +271,7 @@ Sphinx 에는 Builtin Theme 과 Third Party Theme 이 존재한다.
 ## Install sphinx\_rtd\_theme
 
 ```bash
-$ pip install sphinx_rtd_theme
+pip install sphinx_rtd_theme
 ```
 
 <br>
@@ -289,7 +289,7 @@ html_theme = "sphinx_rtd_theme"
 위와 같이 변수를 변경하고 저장한다.  
 그리고 `make html` 를 통해 빌드하여 결과를 확인해보자.  
 
-![py-sphinx_apidoc_theme](./images/etc-03-sphinx_apidoc_theme.png?raw=true){: width="650px"}  
+![etc-sphinx_apidoc_theme](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/ETC/images/etc-03-sphinx_apidoc_theme.png?raw=true){: width="650px"}  
 
 테마가 적용된 것을 확인할 수 있다.  
 
