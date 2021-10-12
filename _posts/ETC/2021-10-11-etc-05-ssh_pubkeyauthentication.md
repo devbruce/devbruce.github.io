@@ -11,6 +11,7 @@ tags:
   - PubkeyAuthentication
   - id_rsa
   - authorized_keys
+  - ubuntu
   - sshd_config
   - permission
 
@@ -44,9 +45,9 @@ tags:
 
 <br><br>
 
-## SSH 공개키 인증(PubkeyAuthentication) 설정 방법
+## Ubuntu SSH 공개키 인증(PubkeyAuthentication) 설정
 
-- `openssh-server` 설치
+### SSH 설치
 
 ```bash
 sudo apt install openssh-server
@@ -55,6 +56,25 @@ sudo apt install openssh-server
 - 서버에 `openssh-server` 를 설치 후 처음 실행될 때 비대칭키 파일들이 자동 생성된다.
   - `/etc/ssh`에서 생성된 비대칭키 파일들을 암호화 알고리즘별로 확인가능하다.(`*.pub` 이 공개키)
   - `/etc/ssh`에 생성되어있는 비대칭키 파일들은 **서버 인증** 과정에서 사용된다.
+  
+<br><br>
+
+### 비대칭키 생성
+
+`ssh-keygen` 명령어를 사용하여 비대칭키를 생성한다.  
+(아래의 코드는 생성예시)
+
+```bash
+ssh-keygen -t rsa
+```
+
+- `-t rsa`: rsa 암호화 알고리즘 사용하여 비대칭키 생성
+
+- 공개키(Public key)값은 서버의 `~/.ssh/authorized_keys`에 추가한다.
+- 비밀키(Private key)는 클라이언트의 `~/.ssh/id_rsa`로 저장한다.(`~/.ssh/id_rsa`가 ssh 명령어의 `-i`의 기본값이다.)  
+(ssh 명령어의 `-i` 옵션으로 파일을 직접 지정할 수 있으므로 `~/.ssh/id_rsa`가 아니더라도 선택가능하다.)
+
+- `~/.ssh` 폴더 및 하위 파일들은 아래의 Recommended Permissions을 참고하여 권한 설정을 해준다.
 
 <br><br>
 
@@ -74,6 +94,14 @@ PasswordAuthentication no
 - `PasswordAuthentication `: 암호 기반 인증(Password 방식) 로그인 여부
   - `PasswordAuthentication` 는 `/etc/ssh/sshd_config` 파일의 마지막 line에 기본값으로  
 yes 로 지정되어있다.(설정할 때 해당값을 no로 변경하는 것을 권장)
+
+<br><br>
+
+### SSH 접속
+
+```bash
+ssh -i ${PrivateKeyPath} -p ${PortNumber} ${USER}@${IP_ADDR}
+```
 
 <br><br>
 
