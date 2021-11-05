@@ -19,23 +19,31 @@ Python Version Manager
 
 <br>
 
-## Install (macOS)
+## Install via Basic GitHub Checkout
+
+### macOS
+
+- with zsh
 
 ```bash
-brew install pyenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 ```
 
 ```bash
-echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
-```
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
+echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
 
-> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
 
 <br><br>
 
-## Install (ubuntu)
+### Ubuntu
 
-### Prerequisites ([Common-build-problems Link](https://github.com/pyenv/pyenv/wiki/Common-build-problems))
+- with zsh
+
+#### Prerequisites ([Common-build-problems Link](https://github.com/pyenv/pyenv/wiki/Common-build-problems))
 
 ```bash
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -43,19 +51,23 @@ libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
 xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 ```
 
-<br>
+#### Install
 
 ```bash
-git clone git@github.com:pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 ```
 
 ```bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
-```
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
+echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
 
-> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+echo 'eval "$(pyenv init --path)"' >> ~/.profile
+
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
 
 <br><br>
 
@@ -67,29 +79,15 @@ echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
 
 <br>
 
-## Install (macOS)
+## Installing as a pyenv plugin with zsh
 
 ```bash
-brew install pyenv-virtualenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 ```
 
 ```bash
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 ```
-> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
-
-<br>
-
-## Install (ubuntu)
-
-```bash
-git clone git@github.com:pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
-```
-
-```bash
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
-```
-> `>> ~/.zshrc` 부분은 본인이 사용하는 Shell 에 맞게 변경필요
 
 <br><br>
 
