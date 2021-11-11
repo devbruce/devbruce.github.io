@@ -4,7 +4,7 @@ excerpt:
 last_modified_at: 2019-01-04
 
 categories:
-  - Django
+  - webdev
 
 tags:
   - django
@@ -22,7 +22,7 @@ tags:
 project 폴더 내부에서
 
 ```bash
-$ django-admin startproject mysite
+django-admin startproject mysite
 ```
 
 위의 코드를 터미널에 입력하면 아래와 같은 구조가 만들어지게 된다.
@@ -78,18 +78,18 @@ Pycharm의 **Refactor** 기능을 통해 문제를 해결해보자.
 그 후, 변경할 디렉토리를 선택한다. 현재 예시의 경우에는 Django 설정 패키지이므로,  
 mysite 폴더를 선택하여 아래 그림과 같이 Refactor애서 Rename을 선택한다.
 
-![django-refactor1](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-03-refactor01.png?raw=true){: width="500px"}
+![django-refactor1](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-04-refactor01.png?raw=true){: width="500px"}
 
 Rename을 클릭하면 아래와 같은 창이 나타난다.
 
-![django-refactor2](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-03-refactor02.png?raw=true){: width="350px"}
+![django-refactor2](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-04-refactor02.png?raw=true){: width="350px"}
 
 위와 같이, 변경할 폴더명을 입력한 뒤, 아래의 체크박스를 모두 체크한다.  
 그리고 Refactor 를 클릭한다.
 
 그럼 아래 이미지처럼, Pycharm 하단에 Preview가 나타난다.
 
-![django-refactor3](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-03-refactor03.png?raw=true){: width="500px"}
+![django-refactor3](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-04-refactor03.png?raw=true){: width="500px"}
 
 하단의 Preview 를 통해 어떤 값들이 자동으로 변경되는지 알 수 있다.  
 또한 변경을 원하지 않는 부분을 편집할 수도 있다.  

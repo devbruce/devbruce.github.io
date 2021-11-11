@@ -4,7 +4,7 @@ excerpt:
 last_modified_at: 2019-01-04
 
 categories:
-  - Django
+  - webdev
 
 tags:
   - django
@@ -24,7 +24,7 @@ tags:
 터미널에서 아래 명령어를 통해 django 를 설치
 
 ```bash
-$ pip install django
+pip install django
 ```
 
 <br><br>
@@ -37,7 +37,7 @@ Django 설치가 완료되었다면 프로젝트를 시작해보자.
 (django 프로젝트 시작 명령어)
 
 ```bash
-$ django-admin startproject <Project_Name>
+django-admin startproject <Project_Name>
 ```
 
 <br>
@@ -48,7 +48,7 @@ $ django-admin startproject <Project_Name>
 - 예시
 
 ```bash
-$ django-admin startproject mysite
+django-admin startproject mysite
 ```
 
 위의 명령어를 터미널에 입력하게 되면, 아래와 같은 구조가 만들어지게 된다.
@@ -80,7 +80,7 @@ $ python manage.py runserver
 `127.0.0.1:8000/` 로 서버가 실행되고,  
 서버가 실행된 주소로 브라우저를 통해 진입하면 아래 이미지와 같은 결과가 나오게 된다.
 
-![image](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-02-runserver.png?raw=true){: width="400px"}  
+![image](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-03-runserver.png?raw=true){: width="400px"}  
 
 ## IP Address 127.0.0.1
 

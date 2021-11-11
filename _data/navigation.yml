@@ -16,24 +16,24 @@ extensions:
     children:
       - title: "Machine Learning"
         url: /categories/machinelearning/
-      - title: "Python"
-        url: /categories/python/
-      - title: "Django"
-        url: /categories/django/
-      - title: "HTML&CSS"
-        url: /categories/hc/
-      - title: "JavaScript"
-        url: /categories/javascript/
-      - title: "SQL"
-        url: /categories/sql/
-      - title: "Git"
-        url: /categories/git/
-      - title: "Ruby"
-        url: /categories/ruby/
-      - title: "AWS"
-        url: /categories/aws/
+      - title: "MLOps"
+        url: /categories/mlops/
+      - title: "Web Development"
+        url: /categories/webdev/
       - title: "Docker"
         url: /categories/docker/
+      - title: "AWS"
+        url: /categories/aws/
+      - title: "Git"
+        url: /categories/git/
+      - title: "Python"
+        url: /categories/python/
+      - title: "JavaScript"
+        url: /categories/javascript/
+      - title: "Ruby"
+        url: /categories/ruby/
+      - title: "SQL"
+        url: /categories/sql/
       - title: "DataStructure"
         url: /categories/datastructure/
       - title: "Algorithm"

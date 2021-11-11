@@ -4,7 +4,7 @@ excerpt:
 last_modified_at: 2020-08-27
 
 categories:
-  - HC
+  - webdev
 
 tags:
   - css

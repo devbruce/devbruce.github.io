@@ -4,7 +4,7 @@ excerpt:
 last_modified_at: 2019-02-05
 
 categories:
-  - Django
+  - webdev
 
 tags:
   - django

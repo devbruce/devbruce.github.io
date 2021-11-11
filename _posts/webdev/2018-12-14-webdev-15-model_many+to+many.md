@@ -4,7 +4,7 @@ excerpt:
 last_modified_at: 2019-01-04
 
 categories:
-  - Django
+  - webdev
 
 tags:
   - django
@@ -47,14 +47,14 @@ tags:
 
 ### Visualization
 
-![dj-mtm](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-14-mtm01.png?raw=true){: width="500px"}  
+![dj-mtm](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-15-mtm01.png?raw=true){: width="500px"}  
 
 <br>
 
 위의 관계는 중간 테이블 (Intermediate Table) 이 생성됨에 따라  
 `1 : M : 1` 형태가 된다. (아래 이미지 참조)  
 
-![dj-mtm2](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-14-mtm02.png?raw=true){: width="650px"}  
+![dj-mtm2](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-15-mtm02.png?raw=true){: width="650px"}  
 
 <br><br>
 

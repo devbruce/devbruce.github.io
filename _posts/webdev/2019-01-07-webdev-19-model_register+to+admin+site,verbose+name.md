@@ -4,7 +4,7 @@ excerpt:
 last_modified_at: 2019-01-07
 
 categories:
-  - Django
+  - webdev
 
 tags:
   - django
@@ -51,7 +51,7 @@ class SecondModel(models.Model):
 
 <br>
 
-![dj-18-admin01](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-18-admin01.png?raw=true){: width="550px"}  
+![dj-18-admin01](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-19-admin01.png?raw=true){: width="550px"}  
 
 <br><br>
 
@@ -73,7 +73,7 @@ admin.site.register(SecondModel)  # SecondModel 을 Admin 페이지에 등록
 
 <br>
 
-![dj-18-admin02](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-18-admin02.png?raw=true){: width="550px"}  
+![dj-18-admin02](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/wedev-19-admin02.png?raw=true){: width="550px"}  
 
 해당 모델이 admin site 에 추가되었음을 알 수 있다.
 
@@ -86,7 +86,7 @@ app 의 `verbose_name` 을 변경하여야 한다.
 
 <br>
 
-![dj-18-admin03](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-18-admin03.png?raw=true){: width="550px"}  
+![dj-18-admin03](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-19-admin03.png?raw=true){: width="550px"}  
 
 해당 앱의 `apps.py` 를 열어서 아래와 같이 `verbose_name` 을 추가한다.
 
@@ -128,7 +128,7 @@ INSTALLED_APPS = [
 
 <br>
 
-![dj-18-admin04](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-18-admin04.png?raw=true){: width="550px"}  
+![dj-18-admin04](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-19-admin04.png?raw=true){: width="550px"}  
 
 app 의 `verbose_name` 이 적용되었다.
 
@@ -161,7 +161,7 @@ Model 의 `verbose_name` 은 위와 같이 정의할 수 있다.
 
 <br>
 
-![dj-18-admin05](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-18-admin05.png?raw=true){: width="550px"}  
+![dj-18-admin05](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-19-admin05.png?raw=true){: width="550px"}  
 
 `verbose_name` 끝에 `s` 가 붙어있는데,  
 `s` 는 `verbose_name_plural`(verbose name 복수) 과 관련된 것으로  
@@ -192,7 +192,7 @@ class SecondModel(models.Model):
 
 <br>
 
-![dj-18-admin06](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/Django/images/dj-18-admin06.png?raw=true){: width="550px"}  
+![dj-18-admin06](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/webdev/images/webdev-19-admin06.png?raw=true){: width="550px"}  
 
 변경된 값이 적용되었다.
 

@@ -1,11 +1,11 @@
 ---
-title: "HTML&CSS Posts"
-permalink: /categories/hc/
+title: "MLOps Posts"
+permalink: /categories/mlops/
 layout: archive
 author_profile: true
 ---
 
-{% assign posts = site.categories.HC | sort:'date' | reverse %}
+{% assign posts = site.categories.MLOps | sort:'date' | reverse %}
 
 {% for post in posts %}
     {% include archive-single.html %}
