@@ -87,8 +87,6 @@ gem "minima", "~> 2.5"
 bundle install
 ```
 
-- ``require': cannot load such file -- webrick (LoadError)` 와 같은 
-
 <br>
 
 ### Make Repository and push
