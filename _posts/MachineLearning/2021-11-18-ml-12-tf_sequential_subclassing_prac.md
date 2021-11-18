@@ -66,6 +66,7 @@ y_test = target_w * x_test + target_bias + noises_test
 ```python
 fig, ax  = plt.subplots(figsize=(8, 8))
 ax.scatter(x_train.numpy(), y_train.numpy())
+ax.set_title('Train Dataset with Noise', fontdict={'fontsize': 20})
 ax.tick_params(labelsize=20)
 ax.grid()
 ```
