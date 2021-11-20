@@ -329,7 +329,10 @@ Subclassing 방식의 한계인 것인지, 다른 방법이 있는 것인지는 
 ### Trainable Variables
 
 ```python
-model.trainable_variables
+import pprint
+
+
+pprint.pprint(model.trainable_variables)
 ```
 
 ```
