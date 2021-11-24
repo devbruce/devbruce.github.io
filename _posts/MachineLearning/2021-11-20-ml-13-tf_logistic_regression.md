@@ -1,5 +1,5 @@
 ---
-title: "[ML] TF Binary Classification Model Implementation"
+title: "[ML] TF Logistic Regression Model Implementation"
 excerpt: 
 last_modified_at: 2021-11-20
 
@@ -10,11 +10,12 @@ tags:
   - python
   - tf
   - tensorflow
+  - logistic_regression
   - binary_classification
 
 ---
 
-# TF Binary Classification Model Implementation
+# TF Logistic Regression Model Implementation
 
 ![tensorflow-v2.7.0](https://img.shields.io/badge/TensorFlow-2.7.0-orange)
 
