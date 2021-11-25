@@ -41,22 +41,22 @@ tf.random.set_seed(1234)
 ## Create Temporary Dataset
 
 ```python
-train_data_size = 1000
-test_data_size = 300
+n_train = 1000
+n_test = 300
 
 # Target Value
 target_w = 3
 target_bias = 1
 
 # Train Dataset
-noises = 0.2 * tf.random.normal(shape=(train_data_size, 1), dtype=tf.float32)
-x_train = tf.random.normal(shape=(train_data_size, 1), dtype=tf.float32)
-y_train = target_w * x_train + target_bias + noises
+noise = 0.2 * tf.random.normal(shape=(n_train, 1), dtype=tf.float32)
+train_x = tf.random.normal(shape=(n_train, 1), dtype=tf.float32)
+train_y = target_w * train_x + target_bias + noise
 
 # Test Dataset
-noises_test = 0.2 * tf.random.normal(shape=(test_data_size, 1), dtype=tf.float32)
-x_test = tf.random.normal(shape=(test_data_size, 1), dtype=tf.float32)
-y_test = target_w * x_test + target_bias + noises_test
+noise_test = 0.2 * tf.random.normal(shape=(n_test, 1), dtype=tf.float32)
+test_x = tf.random.normal(shape=(n_test, 1), dtype=tf.float32)
+test_y = target_w * test_x + target_bias + noise_test
 ```
 
 <br>
@@ -65,7 +65,7 @@ y_test = target_w * x_test + target_bias + noises_test
 
 ```python
 fig, ax  = plt.subplots(figsize=(8, 8))
-ax.scatter(x_train.numpy(), y_train.numpy())
+ax.scatter(train_x.numpy(), train_y.numpy())
 ax.set_title('Train Dataset with Noise', fontdict={'fontsize': 20})
 ax.tick_params(labelsize=20)
 ax.grid()
@@ -116,7 +116,6 @@ model.build(input_shape=(None, 1))
 ```python
 model = tf.keras.models.Sequential(name='seq_prac')
 model.add(tf.keras.layers.Dense(units=1, activation='linear', name='dense_layer1'))
-
 model.build(input_shape=(None, 1))
 ```
 
@@ -196,7 +195,7 @@ model.compile(loss=loss_func, optimizer=optimizer)
 - Model Implementation → Model Build → Model Compile → Model Fit(Training)
 
 ```python
-model.fit(x_train, y_train, epochs=5)
+model.fit(train_x, train_y, epochs=5)
 ```
 
 model.fit의 parameter 중, verbose 값에 따라서 training progress를 다르게 보여준다.
@@ -246,7 +245,7 @@ Epoch 5/5
 ### Evaluate
 
 ```python
-model.evaluate(x_test, y_test)
+model.evaluate(test_x, test_y)
 ```
 
 - `verbose=1`(Default)
@@ -368,6 +367,7 @@ from termcolor import colored
 
 # Model Definition
 model = LinearPredictor()
+model.build(input_shape=(None, 1))
 
 # Hyper Parameters
 EPOCHS = 10
@@ -382,7 +382,7 @@ optimizer = tf.keras.optimizers.SGD(learning_rate=LR)
 
 # Training Iteration
 for epoch in range(1, EPOCHS+1):
-    for x, y in zip(x_train, y_train):
+    for x, y in zip(train_x, train_y):
         # Add batch dimension
         x = tf.expand_dims(x, axis=0)  # shape=(1,) ==> shape=(1, 1)
         
