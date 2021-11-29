@@ -16,7 +16,7 @@ tags:
 
 # TensorFlow Datasets(TFDS)
 
-![tensorflow-v2.7.0](https://img.shields.io/badge/TensorFlow-2.6.0-orange) 
+![tensorflow-v2.6.0](https://img.shields.io/badge/TensorFlow-2.6.0-orange) 
 ![tfds-v4.4.0](https://img.shields.io/badge/tfds-4.4.0-red)
 
 - [인프런 - Tensorflow 사용메뉴얼](https://www.inflearn.com/course/%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B5%AC%ED%98%84) - [Dataset Load1](https://www.youtube.com/watch?v=JBphrtdjclo), [Dataset Load2](https://www.youtube.com/watch?v=4V8P24-rQgM)를 수강하고  
