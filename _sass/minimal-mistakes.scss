@@ -42,9 +42,9 @@
 /* Customization */
 .masthead {
     background-color: $darker-gray;
-    > .masthead__inner-wrap {
-        max-width: 96%;
-    }
+    // > .masthead__inner-wrap {
+    //     max-width: 75%;
+    // }
      .greedy-nav {
         background-color: $darker-gray;
     }
@@ -72,9 +72,9 @@
     background-color: $dark-gray;
 }
 
-#main {
-    max-width: 96%;
-}
+// #main {
+//     max-width: 75%;
+// }
 
 .page {
     font-size: 16px;
