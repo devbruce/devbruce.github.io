@@ -109,29 +109,28 @@ author:
   location         : "Republic of Korea"
   email            : "bruce93k@gmail.com"
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/devbruce/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/devbruce"
     - label: "Kaggle"
       icon: "fab fa-fw fa-kaggle"
       url: "https://www.kaggle.com/devbruce"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/devbruce/"
 
 # Site Footer
 footer:
   links:
-    - label: "Kaggle"
-      icon: "fab fa-fw fa-kaggle"
-      url: "https://www.kaggle.com/devbruce"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github icon-white"
-      url: "https://github.com/devbruce"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/devbruce/"
-
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github icon-white"
+      url: "https://github.com/devbruce"
+    - label: "Kaggle"
+      icon: "fab fa-fw fa-kaggle"
+      url: "https://www.kaggle.com/devbruce"
 
 # Reading Files
 include:
