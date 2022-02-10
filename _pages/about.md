@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: ""
 permalink: /about/
 toc: true
 toc_label: "Contents"
@@ -8,9 +8,17 @@ toc_sticky: true
 
 ---
 
-# Blog Info
+# About
 
-GitHub Repository: <https://github.com/devbruce/devbruce.github.io>
+[![gmail-badge](https://img.shields.io/badge/-Gmail-blueviolet?logo=gmail)](mailto:bruce93k@gmail.com)
+[![linkedin-badge](https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/devbruce/)
+[![blog-badge](http://img.shields.io/badge/-Blog-black?logo=github)](https://devbruce.github.io/)
+[![gist-badge](http://img.shields.io/badge/-Gist-black?logo=github)](https://gist.github.com/DevBruce)
+[![kaggle-badge](https://img.shields.io/badge/-Kaggle-gray?logo=kaggle)](https://www.kaggle.com/devbruce)  
+[![Baekjoon-badge](https://img.shields.io/badge/Baekjoon-Online_Judge-white?labelColor=3ad)](https://www.acmicpc.net/user/devbruce)
+[![solved.ac profile](http://mazassumnida.wtf/api/mini/generate_badge?boj=devbruce)](https://solved.ac/devbruce)  
+
+<br>
 
 ## Notice
 
@@ -25,4 +33,6 @@ If there are some problems on my blog, please give me feedbacks.
 
 ## Reference
 
-See [NOTICE/README.md](https://github.com/DevBruce/DevBruce.github.io/blob/master/NOTICE/README.md)
+- GitHub Pages Repository: <https://github.com/devbruce/devbruce.github.io>
+
+- [NOTICE/README.md](https://github.com/DevBruce/DevBruce.github.io/blob/master/NOTICE/README.md)
