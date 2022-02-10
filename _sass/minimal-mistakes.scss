@@ -57,6 +57,16 @@
     z-index: 50;
 }
 
+.archive__item-title {
+    > a {
+        text-decoration: none;
+    }
+
+    > a:hover {
+        text-decoration: underline;
+    }
+}
+
 .btn--inverse:hover {
     color: $lighter-gray;
     background-color: $dark-gray; 
