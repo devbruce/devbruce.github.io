@@ -1,8 +1,8 @@
 # Bruce Kim's Tech Blog
 
-![GitHub license](https://img.shields.io/github/license/devbruce/devbruce.github.io.svg)
+![License](https://img.shields.io/github/license/devbruce/devbruce.github.io.svg)
 
-URL: <https://devbruce.github.io>
+- URL: <https://devbruce.github.io>
 
 <br>
 
