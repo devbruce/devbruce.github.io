@@ -1,7 +1,7 @@
 ---
 title: "[AWS] Lambda - How to Use Layer"
 excerpt: 
-last_modified_at: 2022-04-09
+last_modified_at: 2022-04-13
 
 categories:
   - AWS
@@ -203,14 +203,16 @@ zip -r py38-pandas.zip ./python
 
 ## Layer 제거
 
-AWS Console에서는 생성한 Lambda layer를 제거하는 UI가 없다(?).  
-대신, awscli를 활용하여 제거가 가능하다.  
+~~AWS Console에서는 생성한 Lambda layer를 제거하는 UI가 없다(?).~~  
+AWS Console의 Layers(Lambda Layer 리스트 페이지) 항목에서 제거가 가능하다.  
+
+#### with AWS CLI
 
 ```bash
 aws lambda delete-layer-version --layer-name ${LayerName} --version-number ${Version}
 ```
 
-그러나 위의 명령어로 제거하더라도 버전 히스토리가 남는 것으로 보인다.  
+그러나 Layer를 제거하더라도 버전 히스토리가 남는 것으로 보인다.  
 만약 `py38-pandas` layer의 version 1을 삭제했다면,  
 같은 이름인 `py38-pandas` layer를 새로 생성시 이전 버전 히스토리로 인해 version 2부터 생성가능하다.
 
