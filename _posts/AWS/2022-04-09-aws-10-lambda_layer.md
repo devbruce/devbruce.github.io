@@ -7,9 +7,9 @@ categories:
   - AWS
 
 tags:
-  - aws
-  - lambda
-  - faas
+  - AWS
+  - Lambda
+  - FaaS
   - layer
   - python
 
