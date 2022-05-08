@@ -23,34 +23,34 @@ tags:
 
 <br>
 
-![Slide01](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide01.png?raw=true){: width="450px"}
+![Slide01](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide01.png?raw=true){: width="650px"}
 
-![Slide02](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide02.png?raw=true){: width="450px"}
+![Slide02](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide02.png?raw=true){: width="650px"}
 
-![Slide03](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide03.png?raw=true){: width="450px"}
+![Slide03](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide03.png?raw=true){: width="650px"}
 
-![Slide04](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide04.png?raw=true){: width="450px"}
+![Slide04](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide04.png?raw=true){: width="650px"}
 
-![Slide05](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide05.png?raw=true){: width="450px"}
+![Slide05](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide05.png?raw=true){: width="650px"}
 
-![Slide06](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide06.png?raw=true){: width="450px"}
+![Slide06](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide06.png?raw=true){: width="650px"}
 
-![Slide07](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide07.png?raw=true){: width="450px"}
+![Slide07](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide07.png?raw=true){: width="650px"}
 
-![Slide08](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide08.png?raw=true){: width="450px"}
+![Slide08](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide08.png?raw=true){: width="650px"}
 
-![Slide09](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide09.png?raw=true){: width="450px"}
+![Slide09](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide09.png?raw=true){: width="650px"}
 
-![Slide10](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide10.png?raw=true){: width="450px"}
+![Slide10](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide10.png?raw=true){: width="650px"}
 
-![Slide11](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide11.png?raw=true){: width="450px"}
+![Slide11](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide11.png?raw=true){: width="650px"}
 
-![Slide12](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide12.png?raw=true){: width="450px"}
+![Slide12](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide12.png?raw=true){: width="650px"}
 
-![Slide13](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide13.png?raw=true){: width="450px"}
+![Slide13](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide13.png?raw=true){: width="650px"}
 
-![Slide14](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide14.png?raw=true){: width="450px"}
+![Slide14](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide14.png?raw=true){: width="650px"}
 
-![Slide15](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide15.png?raw=true){: width="450px"}
+![Slide15](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide15.png?raw=true){: width="650px"}
 
-![Slide16](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide16.png?raw=true){: width="450px"}
+![Slide16](https://github.com/DevBruce/DevBruce.github.io/blob/master/_posts/AWS/images/aws-11-step_functions_io/Slide16.png?raw=true){: width="650px"}
