@@ -24,7 +24,7 @@ pip install apache-airflow
 
 ## Step 1\. Initialize DB
 
-Default DB: SQLite3  
+Default DB: **SQLite3**  
 {: .notice--info}
 
 DAG, Task 관리를 위한 DB 생성  
@@ -34,11 +34,9 @@ DAG, Task 관리를 위한 DB 생성
 airflow db init
 ```
 
-`~/airflow`에 디렉토리가 생성된다.  
-초기 DB 생성 Path는 `${AIRFLOW_HOME}`이지만, 해당 환경변수가 없는 경우 `${HOME}/airflow`가 기본값이 된다.  
-변경을 희망한다면 다음과 같이 환경변수를 임의로 선언이 필요하다.
-
-<br>
+초기 DB 생성 Path는 `${AIRFLOW_HOME}`이지만,  
+해당 환경변수가 없는 경우 `${HOME}/airflow`가 기본값이 된다.  
+변경을 원한다면 다음과 같이 환경변수를 임의로 선언이 필요하다.
 
 ```bash
 export AIRFLOW_HOME="${AnyPath}"
@@ -46,7 +44,7 @@ export AIRFLOW_HOME="${AnyPath}"
 
 <br>
 
-생성된 디렉토리의 구조는 다음과 같다.
+생성되는 파일의 구조는 다음과 같다.
 
 ```
 ${AIRFLOW_HOME}
@@ -65,12 +63,12 @@ ${AIRFLOW_HOME}
 
 ```bash
 airflow users create \
-    --email ${EMAIL} \
-    --firstname ${FIRST_NAME} \
-    --lastname ${LAST_NAME} \
-    --password ${PASSWORD} \
+    --email ${Email} \
+    --firstname ${FirstName} \
+    --lastname ${LastName} \
+    --password ${Password} \
     --role ${ROLE} \
-    --username ${USERNAME}
+    --username ${UserName}
 ```
 
 - `--role`: `Admin`, `User`, `Op`, `Viewer`, `Public`
