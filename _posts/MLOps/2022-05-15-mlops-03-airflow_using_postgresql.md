@@ -46,8 +46,8 @@ docker pull postgres
 
 ```bash
 docker run -d \
-    -v ${HOST_SRC_DIR}:${CONTAINER_DST_DIR} \
-    -p ${HOST_PORT}:${CONTAINER_PORT} \
+    -v ${HOST_SRC_DIR}:/var/lib/postgresql/data \
+    -p ${HOST_PORT}:5432 \
     -e POSTGRES_PASSWORD=${Password} \
     --name ${ContainerName} \
     postgres
