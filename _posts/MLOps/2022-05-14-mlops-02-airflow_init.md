@@ -89,10 +89,6 @@ airflow scheduler
 
 ## Step 4\. Run Airflow Web Server
 
-생성된 유저가 없을 경우 Web Server 실행시 오류가 발생하므로  
-`Step 2. Create User`가 선행되어야 한다.  
-{: .notice--warning}
-
 ```bash
 airflow webserver
 ```
