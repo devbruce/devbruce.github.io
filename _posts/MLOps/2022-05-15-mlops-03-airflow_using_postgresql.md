@@ -21,6 +21,19 @@ tags:
 
 # Airflow Using PostgreSQL(with Docker)
 
+
+현재 포스팅된 방법으로 진행하면 `airflow webserver` 실행시 다음과 아래와 같은 에러가 발생한다.  
+airflow가 작동은 하나, 에러메세지가 보이므로 문제가 있는 것 같다.  
+추후 해당 문제를 해결할 수 있는 방법을 찾게된다면 추가 예정
+{: .notice--danger}
+
+```
+ERROR - Creation of Permission View Error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_view_permission_id_view_menu_id_key"
+DETAIL:  Key (permission_id, view_menu_id)=(5, 35) already exists.
+```
+
+<br>
+
 ## Airflow DB 변경 목적
 
 1. 기본 DB인 SQLite3는 Production 환경에 적합 X
