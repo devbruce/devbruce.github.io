@@ -22,8 +22,8 @@ tags:
 
 해당 문제는 주어진 place에서 모든 응시자 P를 기준으로 맨해튼 거리값(Manhattan distance) 2 이내에 또다른 P의 존재유무를 파악하는 것이다.
 
-- 임의의 P에 대해서 맨해튼 거리 2 이내에 또다른 P가 존재한다.(거리두기 실패): 0 반환
-- 임의의 P에 대해서 맨해튼 거리 2 이내에 또다른 P가 존재하지 않는다.(거리두기 성공): 1 반환
+- 임의의 P에 대해서 맨해튼 거리값 2 이내에 또다른 P가 존재한다.(거리두기 실패): 0 반환
+- 임의의 P에 대해서 맨해튼 거리값 2 이내에 또다른 P가 존재하지 않는다.(거리두기 성공): 1 반환
 
 이 때 `'X'`(파티션)가 응시자 P사이에 존재할 경우, 거리값 2 이내라고 할지라도 거리두기를 지킨 것으로 인정된다.
 
@@ -52,16 +52,10 @@ tags:
 
 - 주어진 place에서 모든 `'P'`의 좌표들(candidates)을 구한다.
 - 각 `'P'` 좌표(candidate)에 대해 상(Up), 하(Down), 좌(Left), 우(Right) 탐색
-- Manhattan distance 2이내에서 `'P'`발견시 거리두기 실패: `False`반환
-- Ignore: Out of index
-- Ignore: Already visited node
-- Ignore: `'X'`(파티션) 
-
-<br>
-
-**브루트 포스(Brute force)**  
-주어진 그래프(place)의 크기가 (5x5)로 제한되어있어 브루트 포스로 접근하여도 문제없을 것 같지만, 코드가 복잡해질 것 같아 시도하지 않았다.  
-{: .notice--info}
+  - Manhattan distance 거리값 2 이내에서 `'P'`발견시 거리두기 실패: `False`반환
+  - Ignore: Out of index
+  - Ignore: Already visited node
+  - Ignore: `'X'`(파티션) 
 
 <br>
 
