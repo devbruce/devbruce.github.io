@@ -38,7 +38,7 @@ extensions:
         url: /categories/datastructure/
       - title: "Algorithm"
         url: /categories/algorithm/
-      - title: "Baekjoon Online Judge"
-        url: /categories/boj/
+      - title: "Coding Test"
+        url: /categories/codingtest/
       - title: "ETC"
         url: /categories/etc/
