@@ -4,7 +4,7 @@ excerpt:
 last_modified_at: 2022-08-07
 
 categories:
-  - CondingTest
+  - CodingTest
 
 tags:
   - programmers
@@ -20,12 +20,12 @@ tags:
 문제 링크: <https://school.programmers.co.kr/learn/courses/30/lessons/81302>  
 {: .notice--info}
 
-해당 문제는 주어진 place에서 모든 응시자 P를 기준으로 맨해튼 거리(Manhattan distance) 2 이내에 또다른 P의 존재유무를 파악하는 것이다.
+해당 문제는 주어진 place에서 모든 응시자 P를 기준으로 맨해튼 거리값(Manhattan distance) 2 이내에 또다른 P의 존재유무를 파악하는 것이다.
 
 - 임의의 P에 대해서 맨해튼 거리 2 이내에 또다른 P가 존재한다.(거리두기 실패): 0 반환
 - 임의의 P에 대해서 맨해튼 거리 2 이내에 또다른 P가 존재하지 않는다.(거리두기 성공): 1 반환
 
-이 때 `'X'`(파티션)가 응시자 P사이에 존재할 경우, 거리 2 이내라고 할지라도 거리두기를 지킨 것으로 인정된다.
+이 때 `'X'`(파티션)가 응시자 P사이에 존재할 경우, 거리값 2 이내라고 할지라도 거리두기를 지킨 것으로 인정된다.
 
 ## Example
 
