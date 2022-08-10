@@ -1,5 +1,5 @@
 ---
-title: "[CodingTest] 프로그래머스 - 거리두기 확인하기(Python)"
+title: "[CodingTest] 2021 카카오 채용연계형 인턴십 - 거리두기 확인하기(Python)"
 excerpt: 
 last_modified_at: 2022-08-07
 
@@ -15,9 +15,9 @@ tags:
 
 ---
 
-# 프로그래머스 - 거리두기 확인하기(Python)
+# 2021 카카오 채용연계형 인턴십 - 거리두기 확인하기(Python)
 
-문제 링크: <https://school.programmers.co.kr/learn/courses/30/lessons/81302>  
+문제 링크(프로그래머스): <https://school.programmers.co.kr/learn/courses/30/lessons/81302>  
 {: .notice--info}
 
 해당 문제는 주어진 place에서 모든 응시자 P를 기준으로 맨해튼 거리값(Manhattan distance) 2 이내에 또다른 P의 존재유무를 파악하는 것이다.
