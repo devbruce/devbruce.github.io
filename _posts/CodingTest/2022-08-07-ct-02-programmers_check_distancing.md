@@ -1,5 +1,5 @@
 ---
-title: "[CondingTest] 프로그래머스 - 거리두기 확인하기(Python)"
+title: "[CodingTest] 프로그래머스 - 거리두기 확인하기(Python)"
 excerpt: 
 last_modified_at: 2022-08-07
 

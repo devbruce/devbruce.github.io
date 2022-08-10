@@ -1,5 +1,5 @@
 ---
-title: "[CondingTest] 프로그래머스 - 다리를 지나는 트럭(Python)"
+title: "[CodingTest] 프로그래머스 - 다리를 지나는 트럭(Python)"
 excerpt: 
 last_modified_at: 2022-08-09
 
