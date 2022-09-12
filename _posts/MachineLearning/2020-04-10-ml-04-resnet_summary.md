@@ -68,7 +68,12 @@ tags:
 
 ### 추가 설명
 
-Identity Mapping이 학습시 최적인 경우에는 여러개의 비선형 레이어를 통과한 $H(x)$를 $F(x)$로 근사시켜야 합니다. 하지만 위에서 언급한대로 Identity Mapping으로 근사는 어렵기 때문에 short connection을 추가하여 $H(x) = F(x) + x$ 형태로 구조를 변환시킵니다. 이렇게되면 $F(x)$ 를 0으로 근사시켰을 때 $H(x) = x$ 가 됩니다. $x$는 multiple nonlinear layers를 통과하기 전 값이며 short connection을 통해 해당 값 그대로를 통과시키게 됩니다. 이에따라 $H(x)$ 는 Identity Mapping으로 근사하게 됩니다. 이 과정에서 $F(x)$ 에 대해서 식을 변형해보면 $F(x) = H(x) - x$ 가 됩니다. 이 때, $H(x) - x$는 Redisual(잔차)를 표현하는 식이되고, $F(x)$를 0으로 근사시킨 것은 결과적으로 잔차를 0으로 근사시킨 결과와 동일한 형태가 됩니다.
+Identity Mapping이 학습시 최적인 경우에는 여러개의 비선형 레이어를 통과한 $H(x)$를 $F(x)$로 근사시켜야 합니다. 하지만 위에서 언급한대로 Identity Mapping으로 근사는 어렵기 때문에 short connection을 추가하여 $H(x) = F(x) + x$ 형태로 구조를 변환시킵니다. 이럴경우 $F(x)$ 를 0으로 근사시켰을 때 $H(x) = x$ 가 됩니다.  
+
+$x$는 multiple nonlinear layers를 통과하기 전 값이며 short connection을 통해 변환없이 그대로 전달된 값 입니다.  
+{: .notice--info}
+
+이에따라 $H(x)$ 는 Identity Mapping으로 근사하게 됩니다. 이 과정에서 $F(x)$ 에 대해서 식을 변형해보면 $F(x) = H(x) - x$ 가 됩니다. 이 때, $H(x) - x$는 Redisual(잔차)를 표현하는 식이되고, $F(x)$를 0으로 근사시킨 것은 결과적으로 잔차를 0으로 근사시킨 결과와 동일한 형태가 됩니다.
 
 <br>
 
