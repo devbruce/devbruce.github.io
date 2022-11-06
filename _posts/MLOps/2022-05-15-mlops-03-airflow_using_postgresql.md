@@ -21,18 +21,8 @@ tags:
 
 # Airflow Using PostgreSQL(with Docker)
 
-
-현재 포스팅된 방법으로 진행하면 `airflow webserver` 실행시 다음과 아래와 같은 에러가 발생한다.  
-airflow가 작동은 하나, 에러메세지가 보이므로 문제가 있는 것 같다.  
-추후 해당 문제를 해결할 수 있는 방법을 찾게된다면 추가 예정
+Airflow 설정 및 실행시 **환경변수를 포함한 Runtime 환경이 설정값에서 진행되는 것이 맞는지 유의**
 {: .notice--danger}
-
-```
-ERROR - Creation of Permission View Error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_view_permission_id_view_menu_id_key"
-DETAIL:  Key (permission_id, view_menu_id)=(5, 35) already exists.
-```
-
-<br>
 
 ## Airflow DB 변경 목적
 
@@ -60,6 +50,7 @@ docker pull postgres
 ```bash
 docker run -d \
     -v ${HOST_SRC_DIR}:/var/lib/postgresql/data \
+    -u "$(id -u):$(id -g)" \
     -p ${HOST_PORT}:5432 \
     -e POSTGRES_PASSWORD=${Password} \
     --name ${ContainerName} \
@@ -68,6 +59,7 @@ docker run -d \
 
 - `-d`: Detached mode. 컨테이너를 백그라운드로 생성
 - `-v`: Volume mount 설정. 해당 값을 지정하지 않을 경우, container가 제거되었을 때 데이터가 초기화된다.
+- `-u`: UID(format: `<name|uid>[:<group|gid>]`), 설정하지 않을 경우 Host와 Container간 권한문제로 인해 에러발생
 - `-p`: Port-forwarding. PostgreSQL의 기본 port는 5432이므로 `5432:5432`가 일반적으로 사용된다.
 - `-e`: 환경변수 설정. 자세한 내용은 [PostgreSQL DockerHub](https://hub.docker.com/_/postgres)의 Environment Variables 섹션 참고
 - `--name`: Container 이름 설정
@@ -135,19 +127,29 @@ CREATE USER ${AIRFLOW_USER_NAME} WITH PASSWORD ${AIRFLOW_USER_PASSWORD};
 GRANT ALL PRIVILEGES ON DATABASE ${AIRFLOW_DB_NAME} TO ${AIRFLOW_USER_NAME};
 ```
 
-- Password는 `'`(Single Quote)로 감싸줘야한다.
+Password는 `'`(Single Quote)로 감싸줘야한다.
+{: .notice--warning}
 
-<br>
+<br><br>
 
 ## 2. Update Airflow Config File
 
-`${AIRFLOW_HOME}/airflow.cfg` 파일에서  다음의 값들을 변경한다.
+### 2-1. Airflow initialize
+
+```bash
+airflow db init
+```
+
+Python 환경 및 환경변수(`AIRFLOW_HOME`) 설정 유의
+{: .notice--danger}
 
 <br>
 
-### 2-1. SqlAlchemy Connection
+### 2-2. config 파일 설정 변경
 
-`[database]` 섹션: `sql_alchemy_conn`값을 다음과 같이 변경한다.  
+> config file path: `${AIRFLOW_HOME}/airflow.cfg`
+
+- `[database]` 섹션: `sql_alchemy_conn`값을 다음과 같이 변경한다.  
 
 ```
 # 기본값
@@ -159,9 +161,7 @@ sql_alchemy_conn = postgresql+psycopg2://${AIRFLOW_USER_NAME}:${AIRFLOW_USER_PAS
 
 <br>
 
-### 2-2. Executor
-
-`[core]` 섹션: `executor`값을 다음과 같이 변경한다.  
+- `[core]` 섹션: `executor`값을 다음과 같이 변경한다.  
 
 ```
 # 기본값(병렬처리 불가)
@@ -173,15 +173,18 @@ executor = LocalExecutor
 
 <br>
 
-## 3. Initialize Airflow Database
+### 2-3. Airflow 설정값 적용
 
 ```bash
 airflow db init
 ```
 
+Initialize 때와 동일하게 Python 환경 및 환경변수(`AIRFLOW_HOME`) 설정값 유의
+{: .notice--danger}
+
 <br><br>
 
-## 4. Check Database
+## 3. Check Database
 
 - Docker Container 접속
 
@@ -244,6 +247,28 @@ psql -U ${AIRFLOW_USER_NAME} -d ${AIRFLOW_DB_NAME}
 위의 과정을 통해 Airflow의 DB가 PostgreSQL로 정상적으로 변경되었음을 확인할 수 있다.  
 
 <br><br>
+
+## Create User
+
+airflow webserver 실행 전, airflow user 생성 선행해야 오류 발생 X
+
+```bash
+airflow users create \
+    --email ${Email} \
+    --firstname ${FirstName} \
+    --lastname ${LastName} \
+    --password ${Password} \
+    --role ${Role} \
+    --username ${UserName}
+```
+
+- `--role`: `Admin`, `User`, `Op`, `Viewer`, `Public`
+
+```bash
+airflow webserver
+```
+
+<br>
 
 ## Reference
 
