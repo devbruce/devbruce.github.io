@@ -21,51 +21,53 @@ Python Version Manager
 
 ## Install via Basic GitHub Checkout
 
-### macOS
-
-- with zsh
-
 ```bash
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 ```
 
-```bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
-echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+<br>
 
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+## Prerequisites
+
+> [suggested-build-environment](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+
+### CentOS
+
+```bash
+yum install -y gcc make zlib-devel bzip2 bzip2-devel \
+readline-devel sqlite sqlite-devel openssl-devel \
+tk-devel libffi-devel xz-devel
 ```
 
-<br><br>
+<br>
 
 ### Ubuntu
 
-- with zsh
-
-#### Prerequisites ([Common-build-problems Link](https://github.com/pyenv/pyenv/wiki/Common-build-problems))
-
 ```bash
-sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
-```
-
-#### Install
-
-```bash
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+sudo apt update
 ```
 
 ```bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
-echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+sudo apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
 
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-echo 'eval "$(pyenv init --path)"' >> ~/.profile
+## Set up your shell environment for Pyenv
 
+- bash
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+```
+
+- zsh
+
+```bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 
