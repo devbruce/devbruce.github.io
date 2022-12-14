@@ -65,7 +65,6 @@ tags:
 
 ```python
 from typing import List
-from collections import deque
 
 
 ROWS, COLS = 5, 5
