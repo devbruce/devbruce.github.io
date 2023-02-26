@@ -29,8 +29,6 @@ class MakeCh:
         self.__name = name  # __ 를 통해 Name Mangling
 ```
 
-<br>
-
 [[Python] Class - Mangling](https://devbruce.github.io/python/py-30-class_mangling/) 에서 다루었던 예제코드이다.  
 위 코드에는 설명했던대로, `__`(double underscore)를 통해 Mangling 을 하였다.  
 즉 인스턴스를 생성 후, `num` 과 `name` 은 해당 단순하게는 접근 불가능하다. (Mangling 된 이름으로 직접 접근 가능)  
@@ -69,16 +67,16 @@ class MakeCh:
         self.__num = MakeCh.ch_num
         self.__name = name
         
-    def get_num(self):  # num 의 접근자
+    def get_num(self):  # num 의 getter(접근자)
         return self.__num
         
-    def set_num(self, num):  # num 의 설정자
+    def set_num(self, num):  # num 의 setter(설정자)
         self.__num = num
         
-    def get_name(self):  # name 의 접근자
+    def get_name(self):  # name 의 getter(접근자)
         return self.__name
         
-    def set_name(self, name):  # name 의 설정자
+    def set_name(self, name):  # name 의 setter(설정자)
         self.__name = name
 ```
 
@@ -92,9 +90,7 @@ ch_first = MakeCh('first')  # 인스턴스 생성
 ```python
 ch_first.get_num()  # 접근자를 통하여 __num 에 접근
 ```
-\>\>\> `1`  
-
-<br>
+\>\>\> `1`
 
 인스턴스 변수 `__num` 값에 접근자를 통하여 접근하였다.
 
@@ -126,3 +122,9 @@ ch_first.get_name()
 \>\>\> `'Awesome'`  
 
 인스턴스 변수 `__name` 값에 생성자를 통하여 값을 변경하는 것에 성공하였다.
+
+getter, setter를 통해서 Mangling 된 값에 접근하거나 값을 변경이 가능하며,
+getter, setter 메서드를 통해서만 접근가능하게 하여 예외처리 및 특정 로직을 설정할 수 있게된다.  
+
+이렇게 직접 getter, setter를 구현할 수도 있지만, python 에서는 `@property`, `@{name}.setter`을 활용하여 구현할 수 있다.  
+해당 내용은 [\[Python\] Class - @property / @name.setter](https://devbruce.github.io/python/py-32-class_@property,@name.setter/) 참고
