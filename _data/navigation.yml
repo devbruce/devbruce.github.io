@@ -1,0 +1,44 @@
+# main links
+main:
+  - title: "Home"
+    url: /
+  - title: "Archive"
+    url: /year-archive/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "About"
+    url: /about/
+
+extensions:
+  - title: Categories
+    children:
+      - title: "Machine Learning"
+        url: /categories/machinelearning/
+      - title: "MLOps"
+        url: /categories/mlops/
+      - title: "Web Development"
+        url: /categories/webdev/
+      - title: "Docker"
+        url: /categories/docker/
+      - title: "AWS"
+        url: /categories/aws/
+      - title: "Git"
+        url: /categories/git/
+      - title: "Python"
+        url: /categories/python/
+      - title: "JavaScript"
+        url: /categories/javascript/
+      - title: "Ruby"
+        url: /categories/ruby/
+      - title: "SQL"
+        url: /categories/sql/
+      - title: "DataStructure"
+        url: /categories/datastructure/
+      - title: "Algorithm"
+        url: /categories/algorithm/
+      - title: "Coding Test"
+        url: /categories/codingtest/
+      - title: "ETC"
+        url: /categories/etc/
