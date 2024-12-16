@@ -10,8 +10,6 @@ math: true
 - Paper Title: Deep Residual Learning for Image Recognition
 - Link: <https://arxiv.org/abs/1512.03385>
 
-## Deep Residual Learning for Image Recognition Citation
-
 ```text
 @misc{he2015deep,
     title={Deep Residual Learning for Image Recognition},
@@ -213,8 +211,6 @@ _Table 1_
 - Paper Title: Identity Mappings in Deep Residual Networks
 
 - Link: <https://arxiv.org/abs/1603.05027>
-
-### Identity Mappings in Deep Residual Networks Citation
 
 ```text
 @misc{he2016identity,
