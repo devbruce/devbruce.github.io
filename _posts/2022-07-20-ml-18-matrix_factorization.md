@@ -178,12 +178,14 @@ $$ bd'_j = bd_j + \alpha \times (e_{ij} - \beta bd_j) $$
 위에서 설명한 대로, Update rule을 구했다면 알고리즘을 구현하는 것은 간단해집니다. 다음은 Python으로 SGD(Stochastic Gradient Descent)을 활용하여 구현한 Matrix Factorization입니다. 해당 구현에는 [Numpy](https://numpy.org) 모듈이 필요합니다.
 
 ```python
+from typing import List
+
 import numpy as np
 
 
 class MatrixFactorization:
     
-    def __init__(self, R:np.ndarray, K:int, alpha:float, beta:float=0.02):
+    def __init__(self, R: np.ndarray, K: int, alpha: float, beta: float = 0.02):
         """
         Args:
             R (np.ndarray): User-Item rating matrix
@@ -192,7 +194,8 @@ class MatrixFactorization:
             beta (float): Regularization parameter
         """
         self.R = R
-        self.num_users, self.num_items = R.shape
+        self.num_users
+        self.num_items = R.shape
         self.K = K
         self.alpha = alpha
         self.beta = beta
@@ -200,7 +203,7 @@ class MatrixFactorization:
         # Create a training samples(Not np.nan indices)
         self.train_ds = np.argwhere(~np.isnan(self.R))
         
-    def train(self, epochs:int):
+    def train(self, epochs: int) -> List[np.float64]:
         # Initialize user and item latent feature matrixes
         self.P = np.random.normal(scale=1./self.K, size=(self.num_users, self.K))
         self.Q = np.random.normal(scale=1./self.K, size=(self.num_items, self.K))
@@ -249,7 +252,7 @@ class MatrixFactorization:
         total_mse = np.sqrt(total_mse)
         return total_mse
 
-    def get_pred_rating(self, i:int, j:int) -> np.float64:
+    def get_pred_rating(self, i: int, j: int) -> np.float64:
         """
         Get the predicted rating of user i and item j
         """
@@ -266,7 +269,8 @@ class MatrixFactorization:
 이제 위에서 언급했던 예시(유저: 5명, 아이템: 10개 평점)를 코드에 적용해보고 결과를 확인해봅시다.  
 
 ```python
-np.random.seed(1234)
+NP_SEED = 1234
+np.random.seed(NP_SEED)
 
 
 R = np.array([
