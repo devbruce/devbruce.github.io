@@ -7,7 +7,7 @@ tags: [ml, recsys, mf, matrix-factorization, cf, collaborative-filtering]
 math: true
 ---
 
-해당 글은 \[[Albert Au Yeung - Matrix Factorization: A Simple Tutorial and Implementation in Python](https://albertauyeung.github.io/2017/04/23/python-matrix-factorization.html)\]를 한국어로 번역하고, 일부 내용과 코드를 변형한 글 입니다.  
+이 포스트는 [Albert Au Yeung - Matrix Factorization: A Simple Tutorial and Implementation in Python](https://albertauyeung.github.io/2017/04/23/python-matrix-factorization.html) 를 한국어로 번역하고, 일부 내용과 코드를 수정한 글 입니다.  
 
 > 문제의 소지가 있거나 잘못된 내용이 있을 경우 피드백 부탁드리겠습니다.
 {: .prompt-warning }
