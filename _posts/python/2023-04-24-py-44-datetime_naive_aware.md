@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, datetime, naive, aware, pytz, timezone]
 ---
 
-![python-version-3.11.2](https://img.shields.io/badge/python-v3.11.2-blue.svg)
+![python-3.11](https://img.shields.io/badge/python-3.11-blue.svg)
 
 ## Naive object vs Aware object
 
