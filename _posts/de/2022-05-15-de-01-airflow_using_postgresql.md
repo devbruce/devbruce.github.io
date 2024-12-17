@@ -6,8 +6,10 @@ categories: [DE]
 tags: [de, airflow, sqlite, postgresql, docker, container]
 ---
 
-![airflow-2.3.0](https://img.shields.io/badge/airflow-2.3-lightgreen.svg)
-![postgresql-14.2](https://img.shields.io/badge/postgres-14.2-skyblue.svg)
+![airflow-2.3.0](https://img.shields.io/badge/airflow-2.3-lightgreen.svg){: .left }
+![postgresql-14.2](https://img.shields.io/badge/postgres-14.2-skyblue.svg){: .left }
+
+<br>
 
 ## Airflow Init on Local(with SQLite3)
 
