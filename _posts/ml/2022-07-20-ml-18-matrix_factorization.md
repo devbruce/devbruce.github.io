@@ -2,7 +2,7 @@
 title: "[ML] Matrix Factorization(MF)"
 author: devbruce
 date: 2022-07-21
-categories: [ml]
+categories: [ML]
 tags: [ml, recsys, mf, matrix-factorization, cf, collaborative-filtering]
 math: true
 ---

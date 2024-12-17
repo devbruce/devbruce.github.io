@@ -2,7 +2,7 @@
 title: "[ML] Paper Review: Deep Redisual Learning for Image Recognition(ResNet)"
 author: devbruce
 date: 2020-04-10
-categories: [ml]
+categories: [ML]
 tags: [ml, resnet, pre-activation, deep-learning, pytorch]
 math: true
 ---
