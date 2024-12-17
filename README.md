@@ -4,11 +4,11 @@
 
 <p align="center">
     <img src="https://github.com/devbruce/devbruce.github.io/actions/workflows/deploy.yml/badge.svg?branch=main" alt="deploy" />
-    <img src="https://img.shields.io/badge/Ruby-3.1.4-red?style=flat&logo=ruby" alt="ruby" />
-    <img src="https://img.shields.io/badge/Node-20.9.0 LTS-green?style=flat&logo=nodedotjs" alt="node" />
     <img src="https://img.shields.io/github/license/devbruce/devbruce.github.io?color=goldenrod" alt="license" /><br>
+    <img src="https://img.shields.io/badge/Ruby-3.1.4-red?style=flat&logo=ruby" alt="ruby" />
+    <img src="https://img.shields.io/badge/Node-20.9.0 LTS-green?style=flat&logo=nodedotjs" alt="node" /><br>
     <a href="https://devbruce.github.io/" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.shields.io/badge/Click to-VIEW Blog 🏠-brightgreen?logo=jekyll&style=for-the-badge" alt="go-to-blog" />
+        <img src="https://img.shields.io/badge/🏠-Click to VIEW Blog -brightgreen?style=for-the-badge" alt="go-to-blog" />
     </a>
 </p>
 
