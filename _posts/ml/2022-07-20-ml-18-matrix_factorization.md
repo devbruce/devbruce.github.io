@@ -369,11 +369,6 @@ print(pred_matrix.round(2))
 ## References
 
 - GitHub Repository: [devbruce/matrix-factorization-py](https://github.com/devbruce/matrix-factorization-py)
-
-<br>
-
-### Origianl Source
-
-- Original Post: [Albert Au Yeung - Matrix Factorization: A Simple Tutorial and Implementation in Python](https://albertauyeung.github.io/2017/04/23/python-matrix-factorization.html)
-- Github Repository: [albertauyeung/matrix-factorization-in-python](https://github.com/albertauyeung/matrix-factorization-in-python)
-- [IPython notebok](https://nbviewer.jupyter.org/github/albertauyeung/matrix-factorization-in-python/blob/master/mf.ipynb)
+- <kbd>Original</kbd>Post: [Albert Au Yeung - Matrix Factorization: A Simple Tutorial and Implementation in Python](https://albertauyeung.github.io/2017/04/23/python-matrix-factorization.html)
+- <kbd>Original</kbd>Github Repository: [albertauyeung/matrix-factorization-in-python](https://github.com/albertauyeung/matrix-factorization-in-python)
+- <kbd>Original</kbd>[IPython Notebok](https://nbviewer.jupyter.org/github/albertauyeung/matrix-factorization-in-python/blob/master/mf.ipynb)

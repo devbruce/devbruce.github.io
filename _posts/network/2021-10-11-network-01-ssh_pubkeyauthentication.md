@@ -57,19 +57,17 @@ ssh-keygen -t rsa
 ```
 
 - `-t rsa`: rsa 암호화 알고리즘 사용하여 비대칭키 생성
-
 - 공개키(Public key)값은 서버의 `~/.ssh/authorized_keys`에 추가한다.
 - 비밀키(Private key)는 클라이언트의 `~/.ssh/id_rsa`로 저장한다.(`~/.ssh/id_rsa`가 ssh 명령어의 `-i`의 기본값이다.)  
 (ssh 명령어의 `-i` 옵션으로 파일을 직접 지정할 수 있으므로 `~/.ssh/id_rsa`가 아니더라도 선택가능하다.)
 
 - `~/.ssh` 폴더 및 하위 파일들은 아래의 Recommended Permissions 을 참고하여 권한 설정을 해준다.
 
-<br><br>
+<br>
 
 ### sshd_config 파일 설정
 
 - Path: `/etc/ssh/sshd_config`
-
 - SSH 공개키 인증을 사용하기 위해서는 `/etc/ssh/sshd_config`의 특정 값들을 다음과 같이 변경한다.
 
 ```text
@@ -81,11 +79,10 @@ PasswordAuthentication no
 - `PermitRootLogin`: root 계정으로 로그인 가능여부(보안상 no 권장)
 - `PasswordAuthentication`: 암호 기반 인증(Password 방식) 로그인 여부
 
-> `PasswordAuthentication` 는 `/etc/ssh/sshd_config` 파일의 마지막 line에 기본값으로 yes 로 지정되어있다.  
-> → 설정할 때 해당값을 no로 변경하는 것을 권장
-{ prompt-tip }
+> `PasswordAuthentication` 는 `/etc/ssh/sshd_config` 파일의 마지막 line 에 기본값으로 yes 로 지정되어있다. 이에따라, 설정할 때 해당 값을 no 로 변경하는 것을 권장
+{: .prompt-tip }
 
-<br><br>
+<br>
 
 ### SSH 접속
 
@@ -93,7 +90,7 @@ PasswordAuthentication no
 ssh -i ${PrivateKeyPath} -p ${PortNumber} ${USER}@${IP_ADDR}
 ```
 
-<br><br>
+<br>
 
 ## Recommended Permissions
 

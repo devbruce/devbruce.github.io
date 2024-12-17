@@ -10,7 +10,7 @@ tags: [python, datetime, naive, aware, pytz, timezone]
 
 ## Naive object vs Aware object
 
-- datetime tzinfo: `None` -> naive object
+- datetime tzinfo: <kbd>None</kbd> `==` naive object
 
 ```python
 from datetime import datetime
