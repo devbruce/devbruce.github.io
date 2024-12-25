@@ -2,8 +2,15 @@
 title: "[Python] datetime: naive vs aware"
 author: devbruce
 date: 2023-04-24
-categories: [Python]
-tags: [python, datetime, naive, aware, pytz, timezone]
+categories:
+  - Python
+tags:
+  - python
+  - datetime
+  - naive
+  - aware
+  - pytz
+  - timezone
 ---
 
 ![python-3.12](https://img.shields.io/badge/python-3.12-blue.svg)
@@ -41,7 +48,9 @@ Asia/Seoul
 2020-03-01 00:00:00+09:00
 ```
 
-## Casting naive object to aware object
+## Timezone Assigment to Naive Object
+
+Naive object to Aware object
 
 > `replace` 로 naive 객체를 `Asia/Seoul` timezone 을 가진 aware 객체로 변경시 KST 가 아닌 LMT 기준이 된다.  
 {: .prompt-danger }
@@ -69,12 +78,12 @@ dt_aware_kst=datetime.datetime(2020, 3, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Seoul' 
 dt_aware_lmt=datetime.datetime(2020, 3, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Seoul' LMT+8:28:00 STD>)
 ```
 
-## Converting timezone
+## Timezone Conversion
 
 naive 객체에 astimezone 적용시, runtime 의 기본 timezone 을 기준으로 변경된다.  
 (Runtime 환경에 따라 값이 달라질 수 있다.)  
 
-> timezone이 명시적인 aware 객체로 변환 후, timezone 변경 권장
+> timezone 변경이 필요한 경우, timezone 이 명시적인 aware 객체로 변환 후, 새로운 timezone 변경하는 것을 권장
 {: .prompt-info }
 
 ```python
@@ -108,7 +117,7 @@ dt_aware_utc=datetime.datetime(2020, 2, 29, 15, 0, tzinfo=<UTC>)
 
 - runtime 의 기본 timezone 이 "Asia/Seoul" 이기 때문에 `dt_naive_to_utc` 이 -9 hours 가 된 것을 확인할 수 있다.
 
-## Comparison
+## Comparison of datetime
 
 datetime 객체의 대소비교는 동일한 종류의 객체끼리만 가능하다.  
 
@@ -116,7 +125,7 @@ datetime 객체의 대소비교는 동일한 종류의 객체끼리만 가능하
 - <kbd>aware</kbd> `<=` <kbd>aware</kbd>: Bool (가능)
 - <kbd>naive</kbd> `<=` <kbd>aware</kbd>: Error (불가능)
 
-### Same objects
+### Case 1. Same objects
 
 ```python
 from datetime import datetime
@@ -137,7 +146,7 @@ True
 True
 ```
 
-### Naive & Aware
+### Case 2. Naive & Aware
 
 ```python
 from datetime import datetime
