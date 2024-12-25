@@ -2,8 +2,16 @@
 title: "[Network] SSH 공개키 인증(PubkeyAuthentication)"
 author: devbruce
 date: 2021-10-11
-categories: [Network]
-tags: [ssh, PubkeyAuthentication, id_rsa, authorized_keys, ubuntu, sshd_config, permission]
+categories:
+  - Network
+tags:
+  - ssh
+  - PubkeyAuthentication
+  - id_rsa
+  - authorized_keys
+  - ubuntu
+  - sshd_config
+  - permission
 ---
 
 ## 인증 과정(Authentication Process)

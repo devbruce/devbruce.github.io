@@ -2,8 +2,15 @@
 title: "[DE] Airflow Initialize"
 author: devbruce
 date: 2022-05-15
-categories: [DE]
-tags: [de, airflow, sqlite, postgresql, docker, container]
+categories:
+  - DE
+tags:
+  - de
+  - airflow
+  - sqlite
+  - postgresql
+  - docker
+  - container
 ---
 
 ![airflow-2.3.0](https://img.shields.io/badge/airflow-2.3-lightgreen.svg){: .left }

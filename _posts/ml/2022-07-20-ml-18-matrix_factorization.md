@@ -2,9 +2,17 @@
 title: "[ML] Matrix Factorization(MF)"
 author: devbruce
 date: 2022-07-21
-categories: [ML]
-tags: [ml, recsys, mf, matrix-factorization, cf, collaborative-filtering]
 math: true
+categories:
+  - ML
+tags:
+  - ml
+  - recsys
+  - mf
+  - matrix-factorization
+  - cf
+  - collaborative-filtering
+
 ---
 
 이 포스트는 [Albert Au Yeung - Matrix Factorization: A Simple Tutorial and Implementation in Python](https://albertauyeung.github.io/2017/04/23/python-matrix-factorization.html) 를 한국어로 번역하고, 일부 내용과 코드를 수정한 글 입니다.  
