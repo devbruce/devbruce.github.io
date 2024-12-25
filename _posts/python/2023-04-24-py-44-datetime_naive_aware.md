@@ -80,7 +80,7 @@ dt_aware_lmt=datetime.datetime(2020, 3, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Seoul' 
 
 ## Timezone Conversion
 
-naive 객체에 astimezone 적용시, runtime 의 기본 timezone 을 기준으로 변경된다.  
+naive 객체에 astimezone 적용시, runtime 의 기본 timezone 기준으로 변경된다.  
 (Runtime 환경에 따라 값이 달라질 수 있다.)  
 
 > timezone 변경이 필요한 경우, timezone 이 명시적인 aware 객체로 변환 후, 새로운 timezone 변경하는 것을 권장
