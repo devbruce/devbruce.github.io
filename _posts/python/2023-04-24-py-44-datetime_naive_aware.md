@@ -6,7 +6,7 @@ categories: [Python]
 tags: [python, datetime, naive, aware, pytz, timezone]
 ---
 
-![python-3.11](https://img.shields.io/badge/python-3.11-blue.svg)
+![python-3.12](https://img.shields.io/badge/python-3.12-blue.svg)
 
 ## Naive object vs Aware object
 
@@ -14,7 +14,6 @@ tags: [python, datetime, naive, aware, pytz, timezone]
 
 ```python
 from datetime import datetime
-
 
 dt_naive = datetime(2020, 3, 1)  # naive object
 print(dt_naive.tzinfo)
@@ -29,25 +28,28 @@ None
 ```python
 from datetime import datetime
 
+import pytz
 
 dt_naive = datetime(2020, 3, 1)  # naive object
 dt_aware_kst = pytz.timezone("Asia/Seoul").localize(dt_naive)  # aware object
 print(dt_aware_kst.tzinfo)
+print(dt_aware_kst)
 ```
 
 ```text
 Asia/Seoul
+2020-03-01 00:00:00+09:00
 ```
 
 ## Casting naive object to aware object
 
-- `replace` 로 naive 객체를 `Asia/Seoul` timezone 을 가진 aware 객체로 변경시 KST 가 아닌 LMT 기준이 된다.  
-일반적으로 KST를 사용하므로, pytz 의 `localize` 를 사용 권장
+> `replace` 로 naive 객체를 `Asia/Seoul` timezone 을 가진 aware 객체로 변경시 KST 가 아닌 LMT 기준이 된다.  
+{: .prompt-danger }
 
 ```python
-import pytz
 from datetime import datetime
 
+import pytz
 
 # Naive object(=> No timezone)
 dt_naive = datetime(2020, 3, 1)  # naive object
@@ -55,7 +57,7 @@ dt_naive = datetime(2020, 3, 1)  # naive object
 # Aware object(=> have timezone)
 ## naive -> aware (using pytz localize) => Recommended
 dt_aware_kst = pytz.timezone("Asia/Seoul").localize(dt_naive)
-## naive -> aware (using replace)
+## naive -> aware (using replace) => LMT(Not KST)
 dt_aware_lmt = dt_naive.replace(tzinfo=pytz.timezone("Asia/Seoul"))
 
 print(f"{dt_aware_kst=}")
@@ -70,14 +72,16 @@ dt_aware_lmt=datetime.datetime(2020, 3, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Seoul' 
 ## Converting timezone
 
 naive 객체에 astimezone 적용시, runtime 의 기본 timezone 을 기준으로 변경된다.  
-즉, runtime 환경에 따라 값이 달라질 수 있다.  
-**따라서 timezone이 명시적인 aware 객체로 변환 후 timezone 변경을 권장한다.**
+(Runtime 환경에 따라 값이 달라질 수 있다.)  
+
+> timezone이 명시적인 aware 객체로 변환 후, timezone 변경 권장
+{: .prompt-info }
 
 ```python
-import pytz
 import time
 from datetime import datetime
 
+import pytz
 
 # Naive object
 dt_naive = datetime(2020, 3, 1)  # naive object
@@ -115,9 +119,9 @@ datetime 객체의 대소비교는 동일한 종류의 객체끼리만 가능하
 ### Same objects
 
 ```python
-import pytz
 from datetime import datetime
 
+import pytz
 
 naive1 = datetime(2020, 3, 1)  # naive object
 naive2 = datetime(2020, 4, 1)  # naive object
@@ -136,9 +140,9 @@ True
 ### Naive & Aware
 
 ```python
-import pytz
 from datetime import datetime
 
+import pytz
 
 naive = datetime(2020, 3, 1)  # naive object
 aware = pytz.timezone("Asia/Seoul").localize(naive)  # aware object
