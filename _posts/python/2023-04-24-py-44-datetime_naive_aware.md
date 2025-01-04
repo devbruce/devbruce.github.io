@@ -29,6 +29,7 @@ print(dt_naive.tzinfo)
 ```text
 None
 ```
+{: file="stdout"}
 
 - datetime tzinfo 존재 → aware object
 
@@ -47,6 +48,7 @@ print(dt_aware_kst)
 Asia/Seoul
 2020-03-01 00:00:00+09:00
 ```
+{: file="stdout"}
 
 ## Timezone Assigment to Naive Object
 
@@ -77,6 +79,7 @@ print(f"{dt_aware_lmt=}")
 dt_aware_kst=datetime.datetime(2020, 3, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Seoul' KST+9:00:00 STD>)
 dt_aware_lmt=datetime.datetime(2020, 3, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Seoul' LMT+8:28:00 STD>)
 ```
+{: file="stdout"}
 
 ## Timezone Conversion
 
@@ -114,6 +117,7 @@ dt_naive_to_utc=datetime.datetime(2020, 2, 29, 15, 0, tzinfo=<UTC>)
 dt_aware_kst=datetime.datetime(2020, 3, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Seoul' KST+9:00:00 STD>)
 dt_aware_utc=datetime.datetime(2020, 2, 29, 15, 0, tzinfo=<UTC>)
 ```
+{: file="stdout"}
 
 - runtime 의 기본 timezone 이 "Asia/Seoul" 이기 때문에 `dt_naive_to_utc` 이 -9 hours 가 된 것을 확인할 수 있다.
 
@@ -145,6 +149,7 @@ print(aware1 < aware2)
 True
 True
 ```
+{: file="stdout"}
 
 ### Case 2. Naive & Aware
 
@@ -161,3 +166,4 @@ print(naive < aware)
 ```text
 TypeError: can't compare offset-naive and offset-aware datetimes
 ```
+{: file="stdout"}
