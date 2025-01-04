@@ -13,8 +13,8 @@ tags:
   - container
 ---
 
-![airflow-2.3.0](https://img.shields.io/badge/airflow-2.3-lightgreen.svg?logo=apache-airflow&logoColor=white){: .left }
-![postgresql-14.2](https://img.shields.io/badge/postgres-14.2-skyblue.svg?logo=postgresql&logoColor=white){: .left }
+![airflow-2.3.0](https://img.shields.io/badge/Airflow-2.3-lightgreen.svg?logo=apache-airflow&logoColor=white){: .left }
+![postgresql-14.2](https://img.shields.io/badge/PostgreSQL-14.2-skyblue.svg?logo=postgresql&logoColor=white){: .left }
 
 <br>
 
