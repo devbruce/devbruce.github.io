@@ -211,8 +211,6 @@ Python 환경 및 환경변수(`AIRFLOW_HOME`) 설정 유의
 
 #### Step 2-2. config 파일 설정 변경
 
-> config file path: `${AIRFLOW_HOME}/airflow.cfg`
-
 - `[database]` 섹션: `sql_alchemy_conn`값을 다음과 같이 변경한다.  
 
 ```text
@@ -222,6 +220,7 @@ sql_alchemy_conn = sqlite:////${AIRFLOW_HOME}/airflow.db
 # PostgreSQL
 sql_alchemy_conn = postgresql+psycopg2://${AIRFLOW_USER_NAME}:${AIRFLOW_USER_PASSWORD}@localhost/${AIRFLOW_DB_NAME}
 ```
+{: file="${AIRFLOW_HOME\}/airflow.cfg"}
 
 - `[core]` 섹션: `executor`값을 다음과 같이 변경한다.  
 
@@ -232,6 +231,7 @@ executor = SequentialExecutor
 # 병렬처리 가능(by PostgreSQL)
 executor = LocalExecutor
 ```
+{: file="${AIRFLOW_HOME\}/airflow.cfg"}
 
 #### Step 2-3. Airflow 설정값 적용
 
@@ -263,6 +263,7 @@ psql -U ${AIRFLOW_USER_NAME} -d ${AIRFLOW_DB_NAME}
 ```text
 \dt
 ```
+{: file="psql shell"}
 
 ```text
                     List of relations
