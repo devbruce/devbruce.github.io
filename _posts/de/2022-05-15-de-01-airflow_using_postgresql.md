@@ -13,8 +13,8 @@ tags:
   - container
 ---
 
-![airflow-2.3.0](https://img.shields.io/badge/airflow-2.3-lightgreen.svg){: .left }
-![postgresql-14.2](https://img.shields.io/badge/postgres-14.2-skyblue.svg){: .left }
+![airflow-2.3.0](https://img.shields.io/badge/airflow-2.3-lightgreen.svg?logo=apache-airflow&logoColor=white){: .left }
+![postgresql-14.2](https://img.shields.io/badge/postgres-14.2-skyblue.svg?logo=postgresql&logoColor=white){: .left }
 
 <br>
 
@@ -304,6 +304,7 @@ psql -U ${AIRFLOW_USER_NAME} -d ${AIRFLOW_DB_NAME}
  public | xcom                          | table | ${AIRFLOW_USER_NAME}
 (33 rows)
 ```
+{: file="psql shell output"}
 
 위의 과정을 통해 Airflow의 DB가 PostgreSQL로 정상적으로 변경되었음을 확인할 수 있다.  
 
