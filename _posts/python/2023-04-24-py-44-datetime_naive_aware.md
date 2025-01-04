@@ -13,7 +13,8 @@ tags:
   - timezone
 ---
 
-![python-3.12](https://img.shields.io/badge/python-3.12-blue.svg)
+![python-3.12](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white){: .left }
+<br>
 
 ## Naive object vs Aware object
 
