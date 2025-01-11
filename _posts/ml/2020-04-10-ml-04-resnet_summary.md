@@ -29,6 +29,7 @@ image:
     primaryClass={cs.CV}
 }
 ```
+{: file="BibTeX formatted citation"}
 
 ## Summary
 
@@ -212,6 +213,7 @@ _Table 1_
     primaryClass={cs.CV}
 }
 ```
+{: file="BibTeX formatted citation"}
 
 ### Summary: Identity Mappings in Deep Residual Networks
 
