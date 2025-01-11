@@ -11,6 +11,10 @@ tags:
   - postgresql
   - docker
   - container
+image:
+  path: /statics/posts/de/de-01-cover.svg
+  width: 100
+  alt: de-01-cover.svg
 ---
 
 ![airflow-2.3.0](https://img.shields.io/badge/Airflow-2.3-lightgreen.svg?logo=apache-airflow&logoColor=white){: .left }
