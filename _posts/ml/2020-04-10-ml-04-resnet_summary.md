@@ -11,7 +11,9 @@ tags:
   - pre-activation
   - deep-learning
   - pytorch
-
+image:
+  path: /statics/posts/ml/ml-04-fig2.png
+  alt: ml-04-fig2.png
 ---
 
 - Paper Title: Deep Residual Learning for Image Recognition
